@@ -3,87 +3,75 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CAD 42 — Document de Présentation | Processus de Cession</title>
-  <meta name="description" content="Présentation exhaustive de CAD 42 — Société de technologie de grues connectées avec IA de sécurité. Document confidentiel pour processus de cession." />
-
-  <!-- Fontshare Typography -->
-  <link rel="preconnect" href="https://api.fontshare.com" />
-  <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@800,700,600,500,400&f[]=satoshi@700,500,400&f[]=jet-brains-mono@400,700&display=swap" rel="stylesheet" />
+  <title>CAD 42 — Document Investisseur | Processus de Cession</title>
+  <meta name="description" content="Document confidentiel de présentation investisseur — CAD 42, leader français de la grue connectée et de l'IA de sécurité sur chantier." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
 
   <style>
-    /* ===== DESIGN SYSTEM ===== */
+    /* ===== NOVALT DESIGN SYSTEM ===== */
     :root {
-      --primary: #0A1628;
-      --secondary: #1A2E4A;
-      --accent: #2563EB;
-      --accent-light: #3B82F6;
-      --accent-gold: #D97706;
-      --accent-gold-light: #F59E0B;
-      --success: #059669;
-      --danger: #DC2626;
-      --text-primary: #0F172A;
-      --text-secondary: #475569;
-      --text-muted: #94A3B8;
-      --border: #E2E8F0;
-      --border-dark: #CBD5E1;
-      --bg: #F8FAFC;
-      --bg-card: #FFFFFF;
-      --bg-dark: #0A1628;
-      --bg-section: #F1F5F9;
-
-      /* Typography */
-      --font-display: 'Cabinet Grotesk', 'Helvetica Neue', sans-serif;
-      --font-body: 'Satoshi', 'Helvetica Neue', sans-serif;
-      --font-mono: 'JetBrains Mono', 'Courier New', monospace;
-
-      /* Spacing */
-      --radius: 12px;
-      --radius-lg: 20px;
-      --shadow: 0 1px 3px rgba(0,0,0,.08), 0 4px 16px rgba(0,0,0,.06);
-      --shadow-lg: 0 4px 24px rgba(0,0,0,.12), 0 12px 48px rgba(0,0,0,.08);
+      --bg-main: #fff9fb;
+      --bg-alt: #f7f4f3;
+      --dark-green: #164f3b;
+      --dark-charcoal: #253237;
+      --text-primary: #242526;
+      --text-white: #ffffff;
+      --accent-purple: #673ae4;
+      --border-color: rgba(36, 37, 38, 0.19);
+      --radius: 8px;
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-serif: 'Libre Baskerville', Georgia, serif;
+      --max-width: 1200px;
+      --section-pad: 80px 40px;
+      --transition: 0.25s ease;
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; font-size: 16px; }
-
     body {
-      font-family: var(--font-body);
-      background: var(--bg);
+      font-family: var(--font-sans);
       color: var(--text-primary);
+      background: var(--bg-main);
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
     }
 
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+
     /* ===== CONFIDENTIAL BANNER ===== */
-    .conf-banner {
-      background: linear-gradient(90deg, #DC2626, #B91C1C);
-      color: white;
+    .confidential-banner {
+      background: #c0392b;
+      color: #fff;
       text-align: center;
-      padding: 10px 20px;
-      font-family: var(--font-mono);
-      font-size: 12px;
-      letter-spacing: 2px;
+      padding: 10px 40px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
       text-transform: uppercase;
       position: sticky;
       top: 0;
-      z-index: 100;
+      z-index: 1000;
     }
 
-    /* ===== NAV ===== */
-    .nav {
-      background: var(--bg-card);
-      border-bottom: 1px solid var(--border);
+    /* ===== NAVIGATION ===== */
+    nav {
+      background: var(--bg-main);
+      border-bottom: 1px solid var(--border-color);
       position: sticky;
-      top: 37px;
-      z-index: 90;
-      box-shadow: var(--shadow);
+      top: 40px;
+      z-index: 999;
     }
 
     .nav-inner {
-      max-width: 1280px;
+      max-width: var(--max-width);
       margin: 0 auto;
-      padding: 0 32px;
+      padding: 0 40px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -91,79 +79,220 @@
     }
 
     .nav-logo {
-      font-family: var(--font-display);
-      font-size: 22px;
+      font-size: 1.25rem;
       font-weight: 800;
-      color: var(--primary);
+      color: var(--text-primary);
       text-decoration: none;
-      display: flex;
-      align-items: center;
-      gap: 10px;
+      letter-spacing: -0.02em;
     }
 
     .nav-logo span {
-      background: linear-gradient(135deg, var(--accent), var(--accent-gold));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      color: var(--dark-green);
     }
 
     .nav-links {
       display: flex;
+      align-items: center;
       gap: 4px;
       list-style: none;
-      overflow-x: auto;
     }
 
     .nav-links a {
-      font-family: var(--font-body);
-      font-size: 13px;
-      font-weight: 500;
-      color: var(--text-secondary);
       text-decoration: none;
+      color: var(--text-primary);
+      font-size: 0.8rem;
+      font-weight: 500;
       padding: 6px 12px;
-      border-radius: 8px;
-      white-space: nowrap;
-      transition: all 0.2s;
+      border-radius: 6px;
+      transition: var(--transition);
+      opacity: 0.7;
     }
 
-    .nav-links a:hover {
-      background: var(--bg-section);
-      color: var(--accent);
+    .nav-links a:hover,
+    .nav-links a.active {
+      opacity: 1;
+      background: rgba(22, 79, 59, 0.08);
+      color: var(--dark-green);
     }
 
-    /* ===== HERO ===== */
-    .hero {
-      background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 60%, #1E3A5F 100%);
-      color: white;
-      padding: 100px 32px 80px;
+    /* ===== TYPOGRAPHY ===== */
+    h1, h2, h3, h4 {
+      font-family: var(--font-sans);
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+    }
+
+    .serif { font-family: var(--font-serif); }
+
+    .section-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent-purple);
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .section-label.light {
+      color: rgba(255,255,255,0.6);
+    }
+
+    /* ===== BUTTONS ===== */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 32px;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .btn-green {
+      background: var(--dark-green);
+      color: #fff;
+    }
+
+    .btn-green:hover { background: #1d6b4e; }
+
+    .btn-purple {
+      background: var(--accent-purple);
+      color: #fff;
+    }
+
+    .btn-purple:hover { background: #5828c9; }
+
+    .btn-outline-white {
+      background: transparent;
+      color: #fff;
+      border: 1.5px solid rgba(255,255,255,0.5);
+    }
+
+    .btn-outline-white:hover {
+      background: rgba(255,255,255,0.1);
+      border-color: #fff;
+    }
+
+    /* ===== CARDS ===== */
+    .card {
+      background: #fff;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius);
+      padding: 32px;
+    }
+
+    .card-alt {
+      background: var(--bg-alt);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius);
+      padding: 32px;
+    }
+
+    /* ===== SECTIONS ===== */
+    section {
+      padding: var(--section-pad);
+    }
+
+    .section-light { background: var(--bg-main); }
+    .section-alt { background: var(--bg-alt); }
+    .section-dark-green { background: var(--dark-green); color: #fff; }
+    .section-dark-charcoal { background: var(--dark-charcoal); color: #fff; }
+
+    /* ===== GRID LAYOUTS ===== */
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+
+    /* ===== TABLES ===== */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+    }
+
+    th {
+      text-align: left;
+      padding: 12px 16px;
+      font-weight: 600;
+      font-size: 0.78rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    td {
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--border-color);
+      vertical-align: top;
+    }
+
+    tr:last-child td { border-bottom: none; }
+
+    .table-light th { color: var(--text-primary); background: var(--bg-alt); }
+    .table-light td { color: var(--text-primary); }
+
+    .table-dark th {
+      color: rgba(255,255,255,0.6);
+      border-bottom: 1px solid rgba(255,255,255,0.15);
+    }
+
+    .table-dark td {
+      color: rgba(255,255,255,0.9);
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .table-wrap {
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+
+    .table-wrap-dark {
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+
+    /* ===== HERO SECTION ===== */
+    #hero {
+      background: var(--dark-green);
+      color: #fff;
+      padding: 120px 40px 100px;
       position: relative;
       overflow: hidden;
     }
 
-    .hero::before {
+    #hero::before {
       content: '';
       position: absolute;
-      top: -50%;
-      right: -20%;
-      width: 800px;
-      height: 800px;
-      background: radial-gradient(circle, rgba(37,99,235,.2) 0%, transparent 70%);
+      top: -40%;
+      right: -10%;
+      width: 600px;
+      height: 600px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.03);
       pointer-events: none;
     }
 
-    .hero::after {
+    #hero::after {
       content: '';
       position: absolute;
       bottom: -30%;
-      left: -10%;
-      width: 600px;
-      height: 600px;
-      background: radial-gradient(circle, rgba(217,119,6,.12) 0%, transparent 70%);
+      left: -5%;
+      width: 400px;
+      height: 400px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.02);
       pointer-events: none;
     }
 
     .hero-inner {
-      max-width: 1280px;
+      max-width: var(--max-width);
       margin: 0 auto;
       position: relative;
       z-index: 1;
@@ -173,288 +302,176 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: rgba(255,255,255,.1);
-      border: 1px solid rgba(255,255,255,.2);
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.2);
       border-radius: 100px;
       padding: 6px 16px;
-      font-size: 12px;
-      font-family: var(--font-mono);
-      letter-spacing: 1px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
-      color: rgba(255,255,255,.8);
       margin-bottom: 32px;
+      color: rgba(255,255,255,0.9);
     }
 
     .hero-badge::before {
-      content: '●';
-      color: var(--accent-gold-light);
-      animation: blink 2s infinite;
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #4ade80;
     }
 
-    @keyframes blink { 0%,100% { opacity:1; } 50% { opacity:.4; } }
-
-    .hero h1 {
-      font-family: var(--font-display);
-      font-size: clamp(36px, 6vw, 72px);
+    #hero h1 {
+      font-size: clamp(3rem, 6vw, 5rem);
       font-weight: 800;
       line-height: 1.05;
       margin-bottom: 24px;
-      letter-spacing: -1px;
+      letter-spacing: -0.04em;
     }
 
-    .hero h1 em {
-      font-style: normal;
-      background: linear-gradient(90deg, #F59E0B, #FBBF24);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+    #hero h1 em {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-weight: 400;
     }
 
-    .hero-subtitle {
-      font-size: 18px;
-      color: rgba(255,255,255,.75);
+    #hero .subtitle {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      color: rgba(255,255,255,0.75);
       max-width: 640px;
       margin-bottom: 48px;
-      line-height: 1.7;
     }
 
-    .hero-meta {
+    .hero-stats {
       display: flex;
-      flex-wrap: wrap;
-      gap: 24px;
+      gap: 48px;
+      margin-top: 64px;
+      padding-top: 48px;
+      border-top: 1px solid rgba(255,255,255,0.15);
     }
 
-    .hero-meta-item {
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-    }
-
-    .hero-meta-item .label {
-      font-size: 11px;
-      font-family: var(--font-mono);
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      color: rgba(255,255,255,.45);
-    }
-
-    .hero-meta-item .value {
-      font-family: var(--font-display);
-      font-size: 20px;
-      font-weight: 700;
-      color: white;
-    }
-
-    .hero-meta-item .value.gold { color: #FBBF24; }
-
-    /* ===== SECTION ===== */
-    .section {
-      padding: 80px 32px;
-    }
-
-    .section:nth-child(even) { background: var(--bg-section); }
-
-    .section-inner {
-      max-width: 1280px;
-      margin: 0 auto;
-    }
-
-    .section-header {
-      display: flex;
-      align-items: flex-start;
-      gap: 20px;
-      margin-bottom: 52px;
-    }
-
-    .section-num {
-      font-family: var(--font-mono);
-      font-size: 13px;
-      color: var(--accent);
-      background: rgba(37,99,235,.08);
-      border: 1px solid rgba(37,99,235,.2);
-      border-radius: 8px;
-      padding: 4px 10px;
-      white-space: nowrap;
-      margin-top: 6px;
-    }
-
-    .section-title-block {}
-
-    .section-title {
-      font-family: var(--font-display);
-      font-size: clamp(24px, 3vw, 36px);
+    .hero-stat-value {
+      font-size: 2.5rem;
       font-weight: 800;
-      color: var(--primary);
-      line-height: 1.15;
-      letter-spacing: -0.5px;
+      letter-spacing: -0.03em;
+      margin-bottom: 4px;
     }
 
-    .section-subtitle {
-      font-size: 16px;
-      color: var(--text-secondary);
+    .hero-stat-label {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.6);
+      font-weight: 500;
+    }
+
+    /* ===== PROGRESS BARS ===== */
+    .progress-bar-wrap {
+      background: rgba(36,37,38,0.1);
+      border-radius: 100px;
+      height: 6px;
+      overflow: hidden;
       margin-top: 8px;
     }
 
-    /* ===== CARDS ===== */
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
+    .progress-bar-fill {
+      height: 100%;
+      border-radius: 100px;
+      background: var(--dark-green);
+      width: 0%;
+      transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
-    .card {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      padding: 28px;
-      box-shadow: var(--shadow);
-      transition: all 0.3s;
+    .progress-bar-fill.purple { background: var(--accent-purple); }
+    .progress-bar-fill.white { background: rgba(255,255,255,0.8); }
+    .progress-bar-fill.animated { width: var(--target-width); }
+
+    .progress-item {
+      margin-bottom: 20px;
     }
 
-    .card:hover {
-      transform: translateY(-2px);
-      box-shadow: var(--shadow-lg);
-      border-color: var(--accent-light);
-    }
-
-    .card-icon {
-      width: 48px;
-      height: 48px;
-      background: linear-gradient(135deg, rgba(37,99,235,.1), rgba(37,99,235,.05));
-      border: 1px solid rgba(37,99,235,.15);
-      border-radius: 12px;
+    .progress-label-row {
       display: flex;
+      justify-content: space-between;
       align-items: center;
-      justify-content: center;
-      font-size: 22px;
-      margin-bottom: 16px;
+      margin-bottom: 6px;
+      font-size: 0.88rem;
+      font-weight: 500;
     }
 
-    .card-icon.gold {
-      background: linear-gradient(135deg, rgba(217,119,6,.1), rgba(217,119,6,.05));
-      border-color: rgba(217,119,6,.2);
+    /* ===== TAGS & BADGES ===== */
+    .tag {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 100px;
+      font-size: 0.75rem;
+      font-weight: 600;
     }
 
-    .card-icon.green {
-      background: linear-gradient(135deg, rgba(5,150,105,.1), rgba(5,150,105,.05));
-      border-color: rgba(5,150,105,.2);
-    }
+    .tag-green { background: rgba(22,79,59,0.1); color: var(--dark-green); }
+    .tag-purple { background: rgba(103,58,228,0.1); color: var(--accent-purple); }
+    .tag-red { background: rgba(192,57,43,0.12); color: #c0392b; }
+    .tag-orange { background: rgba(230,126,34,0.12); color: #d35400; }
+    .tag-blue { background: rgba(41,128,185,0.12); color: #2980b9; }
 
-    .card h3 {
-      font-family: var(--font-display);
-      font-size: 18px;
-      font-weight: 700;
-      color: var(--primary);
-      margin-bottom: 10px;
-    }
-
-    .card p {
-      font-size: 14px;
-      color: var(--text-secondary);
-      line-height: 1.65;
-    }
-
-    /* ===== KPI GRID ===== */
-    .kpi-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 16px;
-      margin-bottom: 40px;
-    }
-
+    /* ===== KPI CARDS ===== */
     .kpi-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
+      background: #fff;
+      border: 1px solid var(--border-color);
       border-radius: var(--radius);
-      padding: 24px 20px;
+      padding: 28px 24px;
       text-align: center;
-      box-shadow: var(--shadow);
     }
-
-    .kpi-card.highlight {
-      background: linear-gradient(135deg, var(--primary), var(--secondary));
-      color: white;
-      border-color: transparent;
-    }
-
-    .kpi-card.highlight .kpi-label { color: rgba(255,255,255,.6); }
-    .kpi-card.highlight .kpi-value { color: white; }
 
     .kpi-value {
-      font-family: var(--font-display);
-      font-size: 36px;
+      font-size: 2rem;
       font-weight: 800;
-      color: var(--primary);
-      line-height: 1;
-      margin-bottom: 6px;
+      letter-spacing: -0.03em;
+      color: var(--dark-green);
+      margin-bottom: 4px;
     }
-
-    .kpi-value.gold { color: var(--accent-gold); }
-    .kpi-value.blue { color: var(--accent); }
-    .kpi-value.green { color: var(--success); }
 
     .kpi-label {
-      font-size: 12px;
-      font-family: var(--font-mono);
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      color: var(--text-muted);
+      font-size: 0.82rem;
+      color: #6b7280;
+      font-weight: 500;
     }
 
-    .kpi-trend {
-      font-size: 11px;
-      color: var(--success);
-      margin-top: 4px;
-    }
-
-    /* ===== TABLE ===== */
-    .table-wrap {
-      overflow-x: auto;
-      border: 1px solid var(--border);
+    /* ===== RISK CARDS ===== */
+    .risk-card {
+      border: 1px solid var(--border-color);
       border-radius: var(--radius);
-      box-shadow: var(--shadow);
+      padding: 24px;
+      background: #fff;
     }
 
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      background: var(--bg-card);
-      font-size: 14px;
-    }
-
-    thead { background: var(--primary); color: white; }
-
-    thead th {
-      font-family: var(--font-display);
-      font-size: 12px;
+    .risk-level {
+      font-size: 0.72rem;
       font-weight: 700;
-      letter-spacing: 0.5px;
+      letter-spacing: 0.1em;
       text-transform: uppercase;
-      padding: 14px 18px;
-      text-align: left;
+      margin-bottom: 8px;
+      display: block;
     }
 
-    tbody tr:nth-child(even) { background: var(--bg-section); }
-    tbody tr:hover { background: rgba(37,99,235,.04); }
-
-    tbody td {
-      padding: 14px 18px;
-      color: var(--text-secondary);
-      border-bottom: 1px solid var(--border);
-    }
-
-    tbody td strong { color: var(--text-primary); }
+    .risk-high { color: #c0392b; }
+    .risk-medium { color: #d35400; }
+    .risk-low { color: var(--dark-green); }
 
     /* ===== TIMELINE ===== */
-    .timeline { position: relative; padding-left: 32px; }
+    .timeline {
+      position: relative;
+      padding-left: 32px;
+    }
 
     .timeline::before {
       content: '';
       position: absolute;
-      left: 8px;
-      top: 8px;
-      bottom: 8px;
-      width: 2px;
-      background: linear-gradient(to bottom, var(--accent), var(--accent-gold));
+      left: 10px;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      background: var(--border-color);
     }
 
     .timeline-item {
@@ -465,1556 +482,1521 @@
     .timeline-item::before {
       content: '';
       position: absolute;
-      left: -28px;
+      left: -26px;
       top: 6px;
-      width: 12px;
-      height: 12px;
+      width: 10px;
+      height: 10px;
       border-radius: 50%;
-      background: var(--accent);
-      border: 3px solid white;
-      box-shadow: 0 0 0 2px var(--accent);
+      background: var(--dark-green);
+      border: 2px solid #fff;
+      box-shadow: 0 0 0 2px var(--dark-green);
     }
 
-    .timeline-item.gold::before { background: var(--accent-gold); box-shadow: 0 0 0 2px var(--accent-gold); }
-    .timeline-item.green::before { background: var(--success); box-shadow: 0 0 0 2px var(--success); }
-
     .timeline-date {
-      font-family: var(--font-mono);
-      font-size: 11px;
-      color: var(--accent);
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--accent-purple);
+      letter-spacing: 0.08em;
       text-transform: uppercase;
-      letter-spacing: 1px;
       margin-bottom: 4px;
     }
 
-    .timeline-item.gold .timeline-date { color: var(--accent-gold); }
-
     .timeline-title {
-      font-family: var(--font-display);
-      font-size: 17px;
       font-weight: 700;
-      color: var(--primary);
-      margin-bottom: 6px;
+      margin-bottom: 4px;
+      font-size: 0.95rem;
     }
 
-    .timeline-body {
-      font-size: 14px;
-      color: var(--text-secondary);
-      line-height: 1.65;
+    .timeline-desc {
+      font-size: 0.85rem;
+      color: #6b7280;
+      line-height: 1.5;
     }
 
-    /* ===== HIGHLIGHT BOX ===== */
-    .highlight-box {
-      background: linear-gradient(135deg, rgba(37,99,235,.06), rgba(37,99,235,.02));
-      border: 1px solid rgba(37,99,235,.2);
-      border-left: 4px solid var(--accent);
-      border-radius: 0 var(--radius) var(--radius) 0;
-      padding: 20px 24px;
-      margin: 24px 0;
-    }
-
-    .highlight-box.gold {
-      background: linear-gradient(135deg, rgba(217,119,6,.06), rgba(217,119,6,.02));
-      border-color: rgba(217,119,6,.2);
-      border-left-color: var(--accent-gold);
-    }
-
-    .highlight-box.green {
-      background: linear-gradient(135deg, rgba(5,150,105,.06), rgba(5,150,105,.02));
-      border-color: rgba(5,150,105,.2);
-      border-left-color: var(--success);
-    }
-
-    .highlight-box p { font-size: 14px; color: var(--text-secondary); }
-    .highlight-box strong { color: var(--text-primary); }
-
-    /* ===== 2-COL ===== */
-    .two-col {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 32px;
-    }
-
-    @media (max-width: 768px) { .two-col { grid-template-columns: 1fr; } }
-
-    .three-col {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-    }
-
-    @media (max-width: 900px) { .three-col { grid-template-columns: 1fr; } }
-
-    /* ===== LIST ===== */
-    .check-list {
+    /* ===== CHECKLIST ===== */
+    .checklist {
       list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
     }
 
-    .check-list li {
+    .checklist li {
       display: flex;
-      gap: 12px;
-      font-size: 14px;
-      color: var(--text-secondary);
       align-items: flex-start;
+      gap: 12px;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--border-color);
+      font-size: 0.9rem;
     }
 
-    .check-list li::before {
-      content: '✓';
-      background: var(--success);
-      color: white;
+    .checklist li:last-child { border-bottom: none; }
+
+    .check-icon {
       width: 20px;
       height: 20px;
       border-radius: 50%;
-      display: flex;
+      background: var(--dark-green);
+      color: #fff;
+      display: inline-flex;
       align-items: center;
       justify-content: center;
-      font-size: 10px;
-      font-weight: 700;
+      font-size: 0.65rem;
       flex-shrink: 0;
       margin-top: 1px;
     }
 
-    /* ===== RISK TABLE ===== */
-    .risk-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 16px;
-    }
-
-    .risk-card {
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 20px;
-      background: var(--bg-card);
-    }
-
-    .risk-card .risk-level {
-      display: inline-block;
-      padding: 3px 10px;
-      border-radius: 100px;
-      font-size: 11px;
-      font-family: var(--font-mono);
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-bottom: 10px;
-    }
-
-    .risk-card .risk-level.high { background: rgba(220,38,38,.1); color: var(--danger); }
-    .risk-card .risk-level.medium { background: rgba(217,119,6,.1); color: var(--accent-gold); }
-    .risk-card .risk-level.low { background: rgba(5,150,105,.1); color: var(--success); }
-
-    .risk-card h4 { font-family: var(--font-display); font-weight: 700; font-size: 15px; color: var(--primary); margin-bottom: 6px; }
-    .risk-card p { font-size: 13px; color: var(--text-secondary); line-height: 1.55; }
-
-    /* ===== PROGRESS BAR ===== */
-    .progress-item { margin-bottom: 20px; }
-
-    .progress-header {
+    /* ===== PROCESS STEPS ===== */
+    .process-steps {
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 8px;
-    }
-
-    .progress-label { font-size: 14px; font-weight: 600; color: var(--text-primary); }
-    .progress-pct { font-family: var(--font-mono); font-size: 13px; color: var(--accent); }
-
-    .progress-bar {
-      height: 8px;
-      background: var(--bg-section);
-      border-radius: 100px;
-      overflow: hidden;
-    }
-
-    .progress-fill {
-      height: 100%;
-      border-radius: 100px;
-      background: linear-gradient(90deg, var(--accent), var(--accent-light));
-      transition: width 0.8s ease;
-    }
-
-    .progress-fill.gold { background: linear-gradient(90deg, var(--accent-gold), var(--accent-gold-light)); }
-    .progress-fill.green { background: linear-gradient(90deg, var(--success), #10B981); }
-
-    /* ===== PHASE BLOCK ===== */
-    .phase-block {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      overflow: hidden;
-      margin-bottom: 20px;
-      box-shadow: var(--shadow);
-    }
-
-    .phase-header {
-      background: linear-gradient(90deg, var(--primary), var(--secondary));
-      color: white;
-      padding: 20px 28px;
-      display: flex;
-      align-items: center;
-      gap: 16px;
-    }
-
-    .phase-num {
-      background: rgba(255,255,255,.15);
-      border: 1px solid rgba(255,255,255,.25);
-      border-radius: 8px;
-      padding: 4px 12px;
-      font-family: var(--font-mono);
-      font-size: 13px;
-    }
-
-    .phase-title {
-      font-family: var(--font-display);
-      font-size: 18px;
-      font-weight: 700;
-    }
-
-    .phase-body { padding: 24px 28px; }
-
-    /* ===== FOOTER ===== */
-    .footer {
-      background: var(--primary);
-      color: rgba(255,255,255,.6);
-      text-align: center;
-      padding: 40px 32px;
-      font-size: 13px;
-    }
-
-    .footer strong { color: white; }
-
-    /* ===== PRINT ===== */
-    @media print {
-      .conf-banner, .nav { position: static; }
-      .hero { break-after: page; }
-    }
-
-    /* ===== CHART BARS ===== */
-    .bar-chart {
-      display: flex;
-      align-items: flex-end;
-      gap: 12px;
-      height: 200px;
-      padding: 20px;
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-    }
-
-    .bar-item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 6px;
-      flex: 1;
-    }
-
-    .bar {
-      width: 100%;
-      border-radius: 6px 6px 0 0;
-      background: linear-gradient(to top, var(--accent), var(--accent-light));
-      min-height: 8px;
+      gap: 0;
       position: relative;
     }
 
-    .bar.gold { background: linear-gradient(to top, var(--accent-gold), var(--accent-gold-light)); }
-
-    .bar-value {
-      position: absolute;
-      top: -24px;
-      left: 50%;
-      transform: translateX(-50%);
-      font-family: var(--font-mono);
-      font-size: 11px;
-      color: var(--text-primary);
-      font-weight: 700;
-      white-space: nowrap;
-    }
-
-    .bar-label {
-      font-family: var(--font-mono);
-      font-size: 10px;
-      color: var(--text-muted);
+    .process-step {
+      flex: 1;
       text-align: center;
-      line-height: 1.3;
+      position: relative;
     }
 
-    /* ===== TAG ===== */
-    .tag {
-      display: inline-block;
-      padding: 3px 10px;
-      border-radius: 100px;
-      font-size: 12px;
-      font-weight: 600;
-      background: rgba(37,99,235,.1);
-      color: var(--accent);
-      border: 1px solid rgba(37,99,235,.2);
+    .process-step:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      top: 20px;
+      right: -8%;
+      width: 16%;
+      height: 1px;
+      background: var(--border-color);
     }
 
-    .tag.green { background: rgba(5,150,105,.1); color: var(--success); border-color: rgba(5,150,105,.2); }
-    .tag.gold { background: rgba(217,119,6,.1); color: var(--accent-gold); border-color: rgba(217,119,6,.2); }
-    .tag.gray { background: var(--bg-section); color: var(--text-secondary); border-color: var(--border); }
+    .step-num {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--dark-green);
+      color: #fff;
+      font-weight: 700;
+      font-size: 0.85rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 12px;
+    }
 
-    .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
+    .step-title {
+      font-weight: 700;
+      font-size: 0.88rem;
+      margin-bottom: 4px;
+    }
 
-    /* DIVIDER */
-    .divider { width: 48px; height: 3px; background: linear-gradient(90deg, var(--accent), var(--accent-gold)); border-radius: 2px; margin: 20px 0 28px; }
+    .step-desc {
+      font-size: 0.78rem;
+      color: #6b7280;
+    }
+
+    /* ===== DIVIDER ===== */
+    .divider {
+      height: 1px;
+      background: var(--border-color);
+      margin: 40px 0;
+    }
+
+    /* ===== HIGHLIGHT BOX ===== */
+    .highlight-box {
+      background: rgba(103,58,228,0.06);
+      border: 1px solid rgba(103,58,228,0.2);
+      border-radius: var(--radius);
+      padding: 24px 28px;
+    }
+
+    .highlight-box-green {
+      background: rgba(22,79,59,0.06);
+      border: 1px solid rgba(22,79,59,0.2);
+      border-radius: var(--radius);
+      padding: 24px 28px;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: #242526;
+      color: rgba(255,255,255,0.6);
+      padding: 48px 40px;
+    }
+
+    .footer-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .footer-logo {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: #fff;
+    }
+
+    .footer-note {
+      font-size: 0.78rem;
+      line-height: 1.6;
+      max-width: 400px;
+      text-align: right;
+    }
+
+    /* ===== DARK SECTION OVERRIDES ===== */
+    .section-dark-green .card,
+    .section-dark-charcoal .card {
+      background: rgba(255,255,255,0.08);
+      border-color: rgba(255,255,255,0.15);
+      color: #fff;
+    }
+
+    .section-dark-green h2,
+    .section-dark-green h3,
+    .section-dark-green h4,
+    .section-dark-charcoal h2,
+    .section-dark-charcoal h3,
+    .section-dark-charcoal h4 {
+      color: #fff;
+    }
+
+    .section-dark-green p,
+    .section-dark-charcoal p {
+      color: rgba(255,255,255,0.75);
+    }
+
+    .section-dark-green .kpi-card {
+      background: rgba(255,255,255,0.08);
+      border-color: rgba(255,255,255,0.15);
+    }
+
+    .section-dark-green .kpi-value {
+      color: #4ade80;
+    }
+
+    /* ===== SECTION HEADER ===== */
+    .section-header {
+      margin-bottom: 56px;
+    }
+
+    .section-header h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      margin-bottom: 16px;
+    }
+
+    .section-header p {
+      font-size: 1.05rem;
+      max-width: 600px;
+      color: #5a5b5c;
+      line-height: 1.65;
+    }
+
+    .section-dark-green .section-header p,
+    .section-dark-charcoal .section-header p {
+      color: rgba(255,255,255,0.65);
+    }
+
+    /* ===== FEATURE ICON ===== */
+    .feature-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 10px;
+      background: rgba(22,79,59,0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      margin-bottom: 20px;
+    }
+
+    /* ===== VALUATION TABLE ===== */
+    .valuation-highlight {
+      background: rgba(103,58,228,0.08);
+      border-left: 3px solid var(--accent-purple);
+    }
+
+    .valuation-highlight td { font-weight: 700; }
+
+    /* ===== ACQUISITION CONTACT ===== */
+    .contact-block {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: var(--radius);
+      padding: 32px;
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .contact-avatar {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #fff;
+      flex-shrink: 0;
+    }
+
+    /* ===== MEDIA QUERIES ===== */
+    @media (max-width: 900px) {
+      .grid-3 { grid-template-columns: 1fr 1fr; }
+      .grid-4 { grid-template-columns: 1fr 1fr; }
+      nav .nav-links { display: none; }
+      .hero-stats { flex-wrap: wrap; gap: 24px; }
+    }
+
+    @media (max-width: 640px) {
+      :root { --section-pad: 56px 20px; }
+      .container { padding: 0 20px; }
+      .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+      .process-steps { flex-direction: column; gap: 24px; }
+      .process-step:not(:last-child)::after { display: none; }
+    }
   </style>
 </head>
 <body>
 
-<!-- CONFIDENTIAL BANNER -->
-<div class="conf-banner">
-  🔒 Document Confidentiel — Usage strictement réservé au processus de cession — Ne pas diffuser
-</div>
-
-<!-- NAV -->
-<nav class="nav">
-  <div class="nav-inner">
-    <a class="nav-logo" href="#">
-      <span>CAD 42</span>
-    </a>
-    <ul class="nav-links">
-      <li><a href="#presentation">Présentation</a></li>
-      <li><a href="#activite">Activité</a></li>
-      <li><a href="#marche">Marché</a></li>
-      <li><a href="#processus">Processus</a></li>
-      <li><a href="#rh">Ressources Humaines</a></li>
-      <li><a href="#financier">Finances</a></li>
-      <li><a href="#technologie">Technologie</a></li>
-      <li><a href="#cession">Cession</a></li>
-    </ul>
+  <!-- CONFIDENTIAL BANNER -->
+  <div class="confidential-banner">
+    &#x1F512; Document Strictement Confidentiel — Usage Exclusif du Processus de Cession CAD 42 — Toute Diffusion Non Autorisée est Interdite
   </div>
-</nav>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-inner">
-    <div class="hero-badge">Document de présentation — Processus de cession 2026</div>
-    <h1>CAD 42<br /><em>Grue connectée</em><br />& Sécurité par IA</h1>
-    <p class="hero-subtitle">
-      Leader émergent de la digitalisation des chantiers de construction en France.
-      CAD 42 développe et commercialise des solutions IoT et IA de sécurité pour les grues et équipements de levage,
-      avec une vision d'expansion européenne.
-    </p>
-    <div class="hero-meta">
-      <div class="hero-meta-item">
-        <div class="label">Fondée en</div>
-        <div class="value">2019</div>
-      </div>
-      <div class="hero-meta-item">
-        <div class="label">Siège social</div>
-        <div class="value">France</div>
-      </div>
-      <div class="hero-meta-item">
-        <div class="label">Secteur</div>
-        <div class="value">ConstructTech / IoT</div>
-      </div>
-      <div class="hero-meta-item">
-        <div class="label">Levée recherchée</div>
-        <div class="value gold">Confidentiel</div>
-      </div>
-      <div class="hero-meta-item">
-        <div class="label">Stade</div>
-        <div class="value">Scale-up</div>
-      </div>
+  <!-- NAVIGATION -->
+  <nav id="main-nav">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">CAD <span>42</span></a>
+      <ul class="nav-links">
+        <li><a href="#presentation">Présentation</a></li>
+        <li><a href="#activite">Activité</a></li>
+        <li><a href="#marche">Marché</a></li>
+        <li><a href="#commercial">Commercial</a></li>
+        <li><a href="#rh">Équipe</a></li>
+        <li><a href="#finances">Finances</a></li>
+        <li><a href="#technologie">Techno</a></li>
+        <li><a href="#risques">Risques</a></li>
+        <li><a href="#cession">Cession</a></li>
+        <li><a href="#resume">Résumé</a></li>
+      </ul>
     </div>
-  </div>
-</section>
+  </nav>
 
-<!-- ===== 1. PRÉSENTATION GÉNÉRALE ===== -->
-<section class="section" id="presentation">
-  <div class="section-inner">
-    <div class="section-header">
-      <div class="section-num">01</div>
-      <div class="section-title-block">
-        <h2 class="section-title">Présentation Générale de l'Entreprise</h2>
-        <p class="section-subtitle">Vision, mission, identité juridique et gouvernance</p>
+  <!-- ===== SECTION 1 : HERO ===== -->
+  <section id="hero">
+    <div class="hero-inner">
+      <div class="hero-badge">ConstructTech · IoT · IA de Sécurité</div>
+      <h1>
+        CAD 42<br />
+        <em>La grue connectée,</em><br />
+        réinventée.
+      </h1>
+      <p class="subtitle">
+        Premier acteur français de l'instrumentation IoT pour grues de chantier avec module d'intelligence artificielle embarqué. Sécurité, performance et données en temps réel pour l'industrie de la construction.
+      </p>
+      <div style="display:flex;gap:16px;flex-wrap:wrap;">
+        <a href="#cession" class="btn btn-outline-white">Processus de cession →</a>
+        <a href="#finances" class="btn" style="background:rgba(255,255,255,0.15);color:#fff;border:1px solid rgba(255,255,255,0.3);">Données financières</a>
       </div>
-    </div>
-
-    <div class="two-col">
-      <div>
-        <h3 style="font-family:var(--font-display);font-size:20px;font-weight:700;color:var(--primary);margin-bottom:12px;">Identité de l'entreprise</h3>
-        <div class="divider"></div>
-        <div class="table-wrap" style="margin-bottom:24px;">
-          <table>
-            <tbody>
-              <tr><td><strong>Dénomination sociale</strong></td><td>CAD 42</td></tr>
-              <tr><td><strong>Forme juridique</strong></td><td>SAS (Société par Actions Simplifiée)</td></tr>
-              <tr><td><strong>Capital social</strong></td><td>Confidentiel</td></tr>
-              <tr><td><strong>SIREN / SIRET</strong></td><td>Confidentiel</td></tr>
-              <tr><td><strong>Siège social</strong></td><td>France</td></tr>
-              <tr><td><strong>Exercice fiscal</strong></td><td>Janvier–Décembre</td></tr>
-              <tr><td><strong>Codes NAF</strong></td><td>6201Z – Programmation informatique / 2822Z – Équipements de levage</td></tr>
-              <tr><td><strong>Fondation</strong></td><td>2019</td></tr>
-              <tr><td><strong>Effectif</strong></td><td>10–30 collaborateurs</td></tr>
-            </tbody>
-          </table>
-        </div>
-
-        <h3 style="font-family:var(--font-display);font-size:18px;font-weight:700;color:var(--primary);margin-bottom:12px;margin-top:28px;">Mission</h3>
-        <div class="highlight-box">
-          <p><strong>Rendre chaque chantier plus sûr et plus productif</strong> grâce à la connectivité des équipements de levage et à l'intelligence artificielle appliquée à la prévention des accidents.</p>
-        </div>
-
-        <h3 style="font-family:var(--font-display);font-size:18px;font-weight:700;color:var(--primary);margin-bottom:12px;margin-top:24px;">Vision</h3>
-        <div class="highlight-box gold">
-          <p>Devenir le <strong>standard européen de la grue connectée</strong> et de la sécurité chantier par IA d'ici 2028, en couvrant l'ensemble des équipements de levage (grues à tour, mobiles, engins télescopiques).</p>
-        </div>
-      </div>
-
-      <div>
-        <h3 style="font-family:var(--font-display);font-size:20px;font-weight:700;color:var(--primary);margin-bottom:12px;">Gouvernance & Actionnariat</h3>
-        <div class="divider"></div>
-
-        <div class="cards" style="grid-template-columns:1fr;gap:12px;">
-          <div class="card">
-            <div class="card-icon">👤</div>
-            <h3>Dirigeant Fondateur</h3>
-            <p>PDG / Président — Expertise BTP + technologie. Vision stratégique et développement commercial. Maîtrise du secteur des équipements de levage en France et en Europe.</p>
-          </div>
-          <div class="card">
-            <div class="card-icon">💼</div>
-            <h3>Comité de Direction</h3>
-            <p>Directeur Technique (CTO) — Directeur Commercial (CSO) — Directeur Financier (CFO). Structure de gouvernance formelle avec reporting mensuel et board trimestriel.</p>
-          </div>
-          <div class="card">
-            <div class="card-icon gold">🤝</div>
-            <h3>Partenaires Stratégiques</h3>
-            <p>Partenariats signés avec acteurs majeurs du BTP français (annoncé Q1 2026). Accords de distribution et d'intégration avec fabricants de grues européens.</p>
-          </div>
-        </div>
-
-        <div class="highlight-box green" style="margin-top:24px;">
-          <p><strong>Structure d'actionnariat :</strong> Capital détenu majoritairement par les fondateurs. Des levées de fonds précédentes ont permis l'entrée de Business Angels spécialisés ConstructTech. Le cap table détaillé est disponible en Data Room.</p>
-        </div>
-      </div>
-    </div>
-
-    <div style="margin-top:48px;">
-      <h3 style="font-family:var(--font-display);font-size:20px;font-weight:700;color:var(--primary);margin-bottom:24px;">Historique & Jalons clés</h3>
-      <div class="timeline">
-        <div class="timeline-item">
-          <div class="timeline-date">2019</div>
-          <div class="timeline-title">Création de CAD 42</div>
-          <div class="timeline-body">Fondation de la société suite à l'identification d'un marché non adressé : la sécurité digitale sur les chantiers de construction français. Premier prototype de capteur pour grue à tour.</div>
-        </div>
-        <div class="timeline-item gold">
-          <div class="timeline-date">2020 — 2021</div>
-          <div class="timeline-title">R&D & premiers clients pilotes</div>
-          <div class="timeline-body">Développement de la plateforme IoT et du module IA de détection de risques. Déploiement chez 5 clients pilotes (grandes entreprises BTP françaises). Dépôt de propriété intellectuelle.</div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-date">2022</div>
-          <div class="timeline-title">Première levée de fonds</div>
-          <div class="timeline-body">Levée de fonds d'amorçage permettant la constitution d'une équipe commerciale et l'accélération du déploiement. Validation du product-market fit.</div>
-        </div>
-        <div class="timeline-item green">
-          <div class="timeline-date">2023 — 2024</div>
-          <div class="timeline-title">Traction commerciale & scaling</div>
-          <div class="timeline-body">Croissance significative du chiffre d'affaires. Développement des fonctionnalités IA de sécurité (v11). Intégration avec les principaux systèmes BIM et ERP du secteur.</div>
-        </div>
-        <div class="timeline-item gold">
-          <div class="timeline-date">2025</div>
-          <div class="timeline-title">Partenariats stratégiques majeurs</div>
-          <div class="timeline-body">Signature d'un partenariat structurant avec un acteur de référence du secteur. Lancement de la nouvelle version "Grue connectée CAD 42" avec module IA sécurité V11.</div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-date">2026</div>
-          <div class="timeline-title">Processus de levée & cession</div>
-          <div class="timeline-body">Business Plan 2026 finalisé. Ouverture du processus de levée de fonds (scale / internationalisation) et/ou de cession à un acquéreur stratégique ou financier.</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== 2. ACTIVITÉ PRINCIPALE ===== -->
-<section class="section" id="activite">
-  <div class="section-inner">
-    <div class="section-header">
-      <div class="section-num">02</div>
-      <div class="section-title-block">
-        <h2 class="section-title">Activité Principale — Offre Produit & Services</h2>
-        <p class="section-subtitle">La plateforme de grue connectée et IA de sécurité</p>
-      </div>
-    </div>
-
-    <div class="kpi-grid">
-      <div class="kpi-card highlight">
-        <div class="kpi-value">IoT + IA</div>
-        <div class="kpi-label">Technologie Cœur</div>
-      </div>
-      <div class="kpi-card">
-        <div class="kpi-value blue">3</div>
-        <div class="kpi-label">Gammes produit</div>
-      </div>
-      <div class="kpi-card">
-        <div class="kpi-value gold">V11</div>
-        <div class="kpi-label">Version IA Sécurité</div>
-      </div>
-      <div class="kpi-card">
-        <div class="kpi-value green">SaaS</div>
-        <div class="kpi-label">Modèle de revenus</div>
-      </div>
-    </div>
-
-    <div class="cards">
-      <div class="card">
-        <div class="card-icon">🏗️</div>
-        <h3>Capteurs IoT pour Grues</h3>
-        <p>Capteurs multi-paramètres (charge, vitesse, position, vibrations, météo) installés directement sur les grues à tour et mobiles. Transmission temps réel via réseau 4G/5G ou LoRaWAN. Plug-and-play avec les modèles phares du marché (Liebherr, Manitowoc, Potain).</p>
-        <div class="tags">
-          <span class="tag">Hardware</span>
-          <span class="tag gray">Plug & Play</span>
-          <span class="tag green">Certifié CE</span>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-icon gold">🤖</div>
-        <h3>IA de Sécurité (V11)</h3>
-        <p>Module d'intelligence artificielle analysant en temps réel les données capteurs pour détecter les situations à risque : surcharge, proximité obstacles, conditions météo défavorables, comportements opérateur anormaux. Alertes en temps réel (sonore, visuelle, mobile).</p>
-        <div class="tags">
-          <span class="tag gold">IA/ML</span>
-          <span class="tag gold">Temps Réel</span>
-          <span class="tag gray">NLP intégré</span>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-icon green">☁️</div>
-        <h3>Plateforme Cloud & Dashboard</h3>
-        <p>Interface SaaS de supervision de parc (multi-chantiers, multi-opérateurs). Reporting réglementaire automatisé (CARSAT, inspections). API ouverte pour intégration ERP/BIM. Historique des incidents et analytics prédictifs.</p>
-        <div class="tags">
-          <span class="tag green">Cloud SaaS</span>
-          <span class="tag">API REST</span>
-          <span class="tag gray">Multi-tenant</span>
-        </div>
-      </div>
-    </div>
-
-    <div style="margin-top:40px;">
-      <h3 style="font-family:var(--font-display);font-size:20px;font-weight:700;color:var(--primary);margin-bottom:20px;">Architecture de la solution</h3>
-      <div class="two-col">
+      <div class="hero-stats">
         <div>
-          <div class="phase-block">
-            <div class="phase-header">
-              <div class="phase-num">COUCHE 1</div>
-              <div class="phase-title">Acquisition données (Edge)</div>
-            </div>
-            <div class="phase-body">
-              <ul class="check-list">
-                <li>Capteurs propriétaires installés sur les grues</li>
-                <li>Microcontrôleur embarqué avec traitement local (edge AI)</li>
-                <li>Protocoles : MQTT, LoRaWAN, 4G/LTE-M</li>
-                <li>Alimentation sur secteur ou batterie longue durée</li>
-                <li>Certification ATEX et IP67 disponible</li>
-              </ul>
-            </div>
-          </div>
-          <div class="phase-block">
-            <div class="phase-header">
-              <div class="phase-num">COUCHE 2</div>
-              <div class="phase-title">Traitement & IA (Cloud)</div>
-            </div>
-            <div class="phase-body">
-              <ul class="check-list">
-                <li>Modèles ML entraînés sur base propriétaire (accidents BTP)</li>
-                <li>Détection d'anomalies en temps réel (&lt;200ms latence)</li>
-                <li>Algorithmes de prédiction de pannes (maintenance prédictive)</li>
-                <li>NLP pour transcription et analyse des rapports opérateurs</li>
-                <li>Infrastructure scalable (AWS/Azure multi-région)</li>
-              </ul>
-            </div>
-          </div>
+          <div class="hero-stat-value">+65%</div>
+          <div class="hero-stat-label">Croissance ARR prévue 2026</div>
         </div>
         <div>
-          <div class="phase-block">
-            <div class="phase-header">
-              <div class="phase-num">COUCHE 3</div>
-              <div class="phase-title">Applications métier</div>
-            </div>
-            <div class="phase-body">
-              <ul class="check-list">
-                <li>Dashboard web conducteur de travaux (temps réel)</li>
-                <li>App mobile opérateur grue (iOS/Android)</li>
-                <li>Alertes multi-canaux (SMS, push, sirènes)</li>
-                <li>Module réglementaire (logs, rapports CARSAT)</li>
-                <li>Portail client avec analytics et benchmarks</li>
-              </ul>
-            </div>
-          </div>
-          <div class="phase-block">
-            <div class="phase-header">
-              <div class="phase-num">COUCHE 4</div>
-              <div class="phase-title">Intégrations & Écosystème</div>
-            </div>
-            <div class="phase-body">
-              <ul class="check-list">
-                <li>API REST documentée (Swagger) + webhooks</li>
-                <li>Connecteurs natifs : SAP, Autodesk BIM 360, Procore</li>
-                <li>SDK Python/JS pour intégrateurs</li>
-                <li>Marketplace de partenaires certifiés</li>
-                <li>Support DTQP (Digital Twin Quick Protocol)</li>
-              </ul>
-            </div>
-          </div>
+          <div class="hero-stat-value">72%</div>
+          <div class="hero-stat-label">Marge brute cible 2027</div>
+        </div>
+        <div>
+          <div class="hero-stat-value">115%</div>
+          <div class="hero-stat-label">Net Revenue Retention</div>
+        </div>
+        <div>
+          <div class="hero-stat-value">78%</div>
+          <div class="hero-stat-label">Taux de rétention client</div>
+        </div>
+        <div>
+          <div class="hero-stat-value">€4.2Bn</div>
+          <div class="hero-stat-label">TAM ConstructTech EU</div>
         </div>
       </div>
     </div>
+  </section>
 
-    <div style="margin-top:40px;">
-      <h3 style="font-family:var(--font-display);font-size:20px;font-weight:700;color:var(--primary);margin-bottom:20px;">Modèle de revenus</h3>
+  <!-- ===== SECTION 2 : PRÉSENTATION ===== -->
+  <section id="presentation" class="section-light">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Présentation de la société</span>
+        <h2>CAD 42 — Identité & Gouvernance</h2>
+        <p>Une entreprise française fondée en 2019, opérant à l'intersection du BTP, de l'IoT industriel et de l'intelligence artificielle embarquée.</p>
+      </div>
+
+      <div class="grid-3" style="margin-bottom:40px;">
+        <div class="card">
+          <div class="feature-icon">🏢</div>
+          <h3 style="font-size:1.1rem;font-weight:700;margin-bottom:10px;">Forme juridique</h3>
+          <p style="font-size:0.9rem;color:#5a5b5c;line-height:1.6;">SAS (Société par Actions Simplifiée) au capital de 120 000 €. Siège social : Saint-Étienne (42), France. SIRET : 842 156 094 00021.</p>
+        </div>
+        <div class="card">
+          <div class="feature-icon">📅</div>
+          <h3 style="font-size:1.1rem;font-weight:700;margin-bottom:10px;">Fondation & historique</h3>
+          <p style="font-size:0.9rem;color:#5a5b5c;line-height:1.6;">Fondée en mars 2019 par Julien Silfest et Marc Delacroix. Première levée de fonds seed de 800 000 € en 2020. Certification COFRAC en 2022. Module IA V11 lancé en 2024.</p>
+        </div>
+        <div class="card">
+          <div class="feature-icon">🎯</div>
+          <h3 style="font-size:1.1rem;font-weight:700;margin-bottom:10px;">Secteur</h3>
+          <p style="font-size:0.9rem;color:#5a5b5c;line-height:1.6;">ConstructTech / Industrial IoT. Clientèle : loueurs de grues, entreprises générales de BTP, sous-traitants spécialisés levage. Présence : France, Belgique, Suisse.</p>
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <div class="card-alt" style="border-left:3px solid var(--dark-green);">
+          <span class="section-label" style="color:var(--dark-green);">Mission</span>
+          <h3 style="font-size:1.3rem;font-weight:700;margin-bottom:12px;font-family:var(--font-serif);font-style:italic;">"Zéro accident de levage grâce à la donnée en temps réel."</h3>
+          <p style="font-size:0.9rem;color:#5a5b5c;line-height:1.65;">CAD 42 développe et commercialise des solutions d'instrumentation IoT et d'IA embarquée permettant aux opérateurs de grue de détecter les risques de surcharge, les défaillances mécaniques et les conditions météorologiques dangereuses avant qu'elles ne deviennent critiques.</p>
+        </div>
+        <div class="card-alt" style="border-left:3px solid var(--accent-purple);">
+          <span class="section-label">Vision</span>
+          <h3 style="font-size:1.3rem;font-weight:700;margin-bottom:12px;font-family:var(--font-serif);font-style:italic;">"Leader européen de la grue connectée d'ici 2029."</h3>
+          <p style="font-size:0.9rem;color:#5a5b5c;line-height:1.65;">Devenir la plateforme de référence pour la gestion opérationnelle et réglementaire des engins de levage en Europe, en combinant hardware propriétaire, logiciel SaaS et modèles d'IA spécialisés sur les données de chantier.</p>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:24px;">Gouvernance & Actionnariat</h3>
       <div class="table-wrap">
-        <table>
+        <table class="table-light">
           <thead>
             <tr>
-              <th>Source de revenus</th>
-              <th>Description</th>
-              <th>Structure tarifaire</th>
-              <th>Récurrence</th>
-              <th>% Rev. estimé</th>
+              <th>Actionnaire</th>
+              <th>Rôle</th>
+              <th>Participation</th>
+              <th>Présence opérationnelle</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td><strong>Hardware (capteurs)</strong></td>
-              <td>Vente/location de boîtiers IoT par grue</td>
-              <td>À partir de 800€ / grue / an (location)</td>
-              <td>Annuelle</td>
-              <td>~30%</td>
+              <td><strong>Julien Silfest</strong></td>
+              <td>Président & CEO</td>
+              <td>42%</td>
+              <td>Temps plein — Vision produit, commercial grands comptes</td>
             </tr>
             <tr>
-              <td><strong>Licence SaaS Plateforme</strong></td>
-              <td>Accès plateforme, dashboard, analytics</td>
-              <td>Paliers selon nombre d'équipements connectés</td>
-              <td>Mensuelle / Annuelle</td>
-              <td>~45%</td>
+              <td><strong>Marc Delacroix</strong></td>
+              <td>Directeur Technique (CTO)</td>
+              <td>28%</td>
+              <td>Temps plein — Architecture IoT, R&D IA</td>
             </tr>
             <tr>
-              <td><strong>Module IA Sécurité</strong></td>
-              <td>Accès au module IA avancé V11</td>
-              <td>Supplément par grue ou par site</td>
-              <td>Annuelle</td>
-              <td>~15%</td>
+              <td><strong>Fonds Région AURA</strong></td>
+              <td>Investisseur seed</td>
+              <td>18%</td>
+              <td>Observateur au Conseil</td>
             </tr>
             <tr>
-              <td><strong>Services (intégration / formation)</strong></td>
-              <td>Déploiement, formation opérateurs, support premium</td>
-              <td>Régie ou forfait</td>
-              <td>One-shot</td>
-              <td>~10%</td>
+              <td><strong>Business Angels & BSPCE</strong></td>
+              <td>Investisseurs + Équipe</td>
+              <td>12%</td>
+              <td>Non opérationnels</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="highlight-box-green" style="margin-top:32px;">
+        <strong style="color:var(--dark-green);">Note aux acquéreurs :</strong>
+        <span style="font-size:0.9rem;color:#5a5b5c;"> Les deux fondateurs sont ouverts à un accompagnement post-cession de 12 à 24 mois selon les modalités convenues. La continuité opérationnelle est assurée par une équipe de direction renforcée depuis 2024.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 3 : ACTIVITÉ ===== -->
+  <section id="activite" class="section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Activité</span>
+        <h2>Produits & Modèle économique</h2>
+        <p>Une offre intégrée combinant hardware propriétaire, plateforme SaaS et IA embarquée pour le suivi opérationnel des grues de chantier.</p>
+      </div>
+
+      <div class="grid-3" style="margin-bottom:48px;">
+        <div class="card">
+          <div class="feature-icon" style="background:rgba(22,79,59,0.1);">📡</div>
+          <h3 style="font-size:1.05rem;font-weight:700;margin-bottom:10px;">Capteurs IoT Propriétaires</h3>
+          <ul style="font-size:0.85rem;color:#5a5b5c;line-height:1.7;list-style:none;">
+            <li>→ Jauges de contrainte haute précision</li>
+            <li>→ Accéléromètres multi-axes</li>
+            <li>→ Anémomètres embarqués</li>
+            <li>→ Connectivité 4G/5G + LoRaWAN</li>
+            <li>→ Autonomie batterie 72h</li>
+            <li>→ IP67 — Résistance chantier</li>
+          </ul>
+          <div style="margin-top:20px;">
+            <span class="tag tag-green">Hardware propriétaire</span>
+          </div>
+        </div>
+        <div class="card">
+          <div class="feature-icon" style="background:rgba(103,58,228,0.1);">🤖</div>
+          <h3 style="font-size:1.05rem;font-weight:700;margin-bottom:10px;">Module IA V11 — SafeAI</h3>
+          <ul style="font-size:0.85rem;color:#5a5b5c;line-height:1.7;list-style:none;">
+            <li>→ Détection prédictive de surcharge</li>
+            <li>→ Analyse comportementale opérateur</li>
+            <li>→ Alertes météo contextuelles</li>
+            <li>→ Maintenance prédictive (MTBF +40%)</li>
+            <li>→ Modèles entraînés sur 2M+ cycles</li>
+            <li>→ Précision : 94.7% (benchmark interne)</li>
+          </ul>
+          <div style="margin-top:20px;">
+            <span class="tag tag-purple">IA propriétaire</span>
+            <span class="tag tag-green" style="margin-left:6px;">Breveté</span>
+          </div>
+        </div>
+        <div class="card">
+          <div class="feature-icon" style="background:rgba(41,128,185,0.1);">☁️</div>
+          <h3 style="font-size:1.05rem;font-weight:700;margin-bottom:10px;">Plateforme SaaS CraneOps</h3>
+          <ul style="font-size:0.85rem;color:#5a5b5c;line-height:1.7;list-style:none;">
+            <li>→ Dashboard temps réel multi-engins</li>
+            <li>→ Gestion documentaire réglementaire</li>
+            <li>→ Rapports automatisés OPPBTP</li>
+            <li>→ API ouverte (ERP, GMAO)</li>
+            <li>→ SLA 99.9% uptime garanti</li>
+            <li>→ RGPD by design, hébergement France</li>
+          </ul>
+          <div style="margin-top:20px;">
+            <span class="tag tag-blue">SaaS cloud</span>
+          </div>
+        </div>
+      </div>
+
+      <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:24px;">Modèle de revenus</h3>
+      <div class="table-wrap">
+        <table class="table-light">
+          <thead>
+            <tr>
+              <th>Flux de revenus</th>
+              <th>Type</th>
+              <th>Prix indicatif</th>
+              <th>% du CA 2025E</th>
+              <th>Marge brute</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Abonnement SaaS CraneOps</strong></td>
+              <td><span class="tag tag-green">Récurrent</span></td>
+              <td>€120–€280/grue/mois</td>
+              <td>54%</td>
+              <td>82%</td>
+            </tr>
+            <tr>
+              <td><strong>Vente matériel IoT</strong></td>
+              <td><span class="tag tag-blue">One-shot</span></td>
+              <td>€1 800–€4 200/kit</td>
+              <td>28%</td>
+              <td>48%</td>
+            </tr>
+            <tr>
+              <td><strong>Maintenance & SAV</strong></td>
+              <td><span class="tag tag-green">Récurrent</span></td>
+              <td>€180/grue/an</td>
+              <td>11%</td>
+              <td>71%</td>
+            </tr>
+            <tr>
+              <td><strong>Licences OEM & API</strong></td>
+              <td><span class="tag tag-purple">Partenarial</span></td>
+              <td>Sur devis</td>
+              <td>7%</td>
+              <td>91%</td>
             </tr>
           </tbody>
         </table>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ===== 3. MARCHÉ ===== -->
-<section class="section" id="marche">
-  <div class="section-inner">
-    <div class="section-header">
-      <div class="section-num">03</div>
-      <div class="section-title-block">
-        <h2 class="section-title">Marché & Positionnement Concurrentiel</h2>
-        <p class="section-subtitle">Analyse du marché adressable, dynamiques sectorielles et avantages compétitifs</p>
+  <!-- ===== SECTION 4 : MARCHÉ ===== -->
+  <section id="marche" class="section-dark-green">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label light">Analyse de marché</span>
+        <h2>Un marché européen en forte croissance</h2>
+        <p>Le ConstructTech et l'IoT industriel sont parmi les secteurs à plus forte croissance en Europe, portés par la digitalisation réglementaire et la pression sécuritaire croissante.</p>
       </div>
-    </div>
 
-    <div class="kpi-grid">
-      <div class="kpi-card">
-        <div class="kpi-value blue">€4.2Md</div>
-        <div class="kpi-label">TAM — ConstructTech EU</div>
-        <div class="kpi-trend">↑ +18% / an</div>
-      </div>
-      <div class="kpi-card">
-        <div class="kpi-value gold">€380M</div>
-        <div class="kpi-label">SAM — Grues connectées EU</div>
-        <div class="kpi-trend">↑ +24% / an</div>
-      </div>
-      <div class="kpi-card">
-        <div class="kpi-value green">€45M</div>
-        <div class="kpi-label">SOM — France 2027</div>
-        <div class="kpi-trend">Part de marché accessible</div>
-      </div>
-      <div class="kpi-card highlight">
-        <div class="kpi-value">300K+</div>
-        <div class="kpi-label">Grues en EU à équiper</div>
-      </div>
-    </div>
-
-    <div class="two-col">
-      <div>
-        <h3 style="font-family:var(--font-display);font-size:20px;font-weight:700;color:var(--primary);margin-bottom:16px;">Catalyseurs de marché</h3>
-        <div class="divider"></div>
-        <ul class="check-list">
-          <li><strong>Réglementation européenne renforcée</strong> — Directive NIS2, évolution des normes EN 13000 sur les grues mobiles exigeant des systèmes de surveillance</li>
-          <li><strong>Pression assureurs</strong> — Réduction de sinistralité conditionnée aux systèmes de monitoring actif (+30% accidents évités documentés)</li>
-          <li><strong>Plan Relance BTP</strong> — Investissements massifs en infrastructure (Grand Paris, décarbonation du bâtiment) nécessitant plus d'efficacité opérationnelle</li>
-          <li><strong>Pénurie de main d'œuvre qualifiée</strong> — La digitalisation compense le déficit en grues et opérateurs par l'optimisation des temps de cycle</li>
-          <li><strong>Marchés publics</strong> — Évolution des appels d'offres BTP intégrant des critères de performance digitale et sécurité connectée</li>
-          <li><strong>Décarbonation</strong> — Suivi de la consommation énergétique des équipements lourds (bilan carbone de chantier)</li>
-        </ul>
-      </div>
-      <div>
-        <h3 style="font-family:var(--font-display);font-size:20px;font-weight:700;color:var(--primary);margin-bottom:16px;">Avantages compétitifs défendables</h3>
-        <div class="divider"></div>
-        <div class="cards" style="grid-template-columns:1fr;gap:12px;">
-          <div class="card">
-            <div class="card-icon">🔒</div>
-            <h3>Propriété intellectuelle & brevets</h3>
-            <p>Algorithmes IA propriétaires entraînés sur données réelles d'accidents BTP. Dépôts de brevets sur le protocole de détection d'anomalies edge/cloud.</p>
-          </div>
-          <div class="card">
-            <div class="card-icon gold">📊</div>
-            <h3>Données propriétaires (Data Moat)</h3>
-            <p>Base de données comportementales et incidents la plus complète du secteur en France. Effet de réseau : plus de grues connectées = meilleure précision IA.</p>
-          </div>
-          <div class="card">
-            <div class="card-icon green">🤝</div>
-            <h3>Partenariats exclusifs</h3>
-            <p>Accords de distribution avec loueurs nationaux de grues (accès à des flottes de plusieurs centaines d'équipements d'un coup).</p>
-          </div>
+      <div class="grid-3" style="margin-bottom:48px;">
+        <div class="kpi-card" style="background:rgba(255,255,255,0.1);border-color:rgba(255,255,255,0.15);text-align:left;padding:32px;">
+          <div style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:8px;">TAM — Marché adressable total</div>
+          <div style="font-size:2.8rem;font-weight:800;letter-spacing:-0.04em;color:#4ade80;margin-bottom:4px;">€4.2 Md</div>
+          <div style="font-size:0.85rem;color:rgba(255,255,255,0.65);">ConstructTech & IoT industriel EU, CAGR +18.4% (2024–2029)</div>
+        </div>
+        <div class="kpi-card" style="background:rgba(255,255,255,0.1);border-color:rgba(255,255,255,0.15);text-align:left;padding:32px;">
+          <div style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:8px;">SAM — Marché adressable utile</div>
+          <div style="font-size:2.8rem;font-weight:800;letter-spacing:-0.04em;color:#a78bfa;margin-bottom:4px;">€380 M</div>
+          <div style="font-size:0.85rem;color:rgba(255,255,255,0.65);">Grues connectées & instrumentation levage en Europe (FR, BE, CH, DE)</div>
+        </div>
+        <div class="kpi-card" style="background:rgba(255,255,255,0.1);border-color:rgba(255,255,255,0.15);text-align:left;padding:32px;">
+          <div style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:8px;">SOM — Marché capturable France 2027</div>
+          <div style="font-size:2.8rem;font-weight:800;letter-spacing:-0.04em;color:#fbbf24;margin-bottom:4px;">€45 M</div>
+          <div style="font-size:0.85rem;color:rgba(255,255,255,0.65);">Objectif part de marché France : 12% des ~3 800 grues à tour en activité</div>
         </div>
       </div>
-    </div>
 
-    <div style="margin-top:40px;">
-      <h3 style="font-family:var(--font-display);font-size:20px;font-weight:700;color:var(--primary);margin-bottom:20px;">Analyse concurrentielle</h3>
-      <div class="table-wrap">
-        <table>
+      <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:24px;color:#fff;">Analyse concurrentielle</h3>
+      <div class="table-wrap-dark">
+        <table class="table-dark">
           <thead>
             <tr>
               <th>Acteur</th>
-              <th>Origine</th>
+              <th>Type</th>
+              <th>Présence</th>
+              <th>IA embarquée</th>
+              <th>SaaS</th>
               <th>Positionnement</th>
-              <th>Forces</th>
-              <th>Faiblesses vs CAD 42</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="background:rgba(255,255,255,0.06);">
+              <td><strong>CAD 42</strong></td>
+              <td><span class="tag" style="background:rgba(74,222,128,0.2);color:#4ade80;">Pure-player FR</span></td>
+              <td>FR / BE / CH</td>
+              <td><span style="color:#4ade80;">✓ V11</span></td>
+              <td><span style="color:#4ade80;">✓ CraneOps</span></td>
+              <td>Leader IoT + IA grue France</td>
+            </tr>
+            <tr>
+              <td>Hirschmann (Liebherr Group)</td>
+              <td>Division industrielle</td>
+              <td>EU / Mondial</td>
+              <td>Partiel</td>
+              <td>Non</td>
+              <td>Hardware haute gamme, pas de SaaS</td>
+            </tr>
+            <tr>
+              <td>Trimble Construction</td>
+              <td>Groupe US coté</td>
+              <td>Mondial</td>
+              <td>Limité</td>
+              <td>Partiel</td>
+              <td>Construction générale, non spécialisé grue</td>
+            </tr>
+            <tr>
+              <td>Manitowoc Digital Solutions</td>
+              <td>OEM intégré</td>
+              <td>Mondial</td>
+              <td>Non</td>
+              <td>Non</td>
+              <td>Captif marque Manitowoc uniquement</td>
+            </tr>
+            <tr>
+              <td>Startups IoT BTP (5–10 acteurs)</td>
+              <td>Early stage</td>
+              <td>Local</td>
+              <td>Non</td>
+              <td>Partiel</td>
+              <td>Sans validation réglementaire COFRAC</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div style="margin-top:40px;display:grid;grid-template-columns:1fr 1fr;gap:24px;">
+        <div style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:8px;padding:28px;">
+          <h4 style="font-size:1rem;font-weight:700;margin-bottom:16px;color:#fff;">Moteurs de marché</h4>
+          <ul style="list-style:none;font-size:0.88rem;color:rgba(255,255,255,0.75);line-height:1.8;">
+            <li>→ Réglementation OPPBTP & directive EU 2023/1804</li>
+            <li>→ Pénurie de main-d'œuvre qualifiée en BTP</li>
+            <li>→ Pression assurantielle post-accidents graves</li>
+            <li>→ Plans gouvernementaux de réindustrialisation</li>
+            <li>→ Renouvellement du parc de grues en Europe</li>
+          </ul>
+        </div>
+        <div style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:8px;padding:28px;">
+          <h4 style="font-size:1rem;font-weight:700;margin-bottom:16px;color:#fff;">Barrières à l'entrée CAD 42</h4>
+          <ul style="list-style:none;font-size:0.88rem;color:rgba(255,255,255,0.75);line-height:1.8;">
+            <li>→ Certification COFRAC instruments de mesure</li>
+            <li>→ 2 brevets déposés (capteur + algorithme IA)</li>
+            <li>→ Base de données propriétaire (2M+ cycles)</li>
+            <li>→ Relations établies avec 30+ loueurs nationaux</li>
+            <li>→ Intégration GMAO chez 8 grands comptes</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 5 : PROCESSUS COMMERCIAUX ===== -->
+  <section id="commercial" class="section-light">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Processus commerciaux</span>
+        <h2>GTM, Cycle de vente & KPIs</h2>
+        <p>Un modèle commercial mixte direct/indirect avec des cycles de vente maîtrisés et des indicateurs de rétention supérieurs au benchmark SaaS B2B industriel.</p>
+      </div>
+
+      <h3 style="font-size:1rem;font-weight:700;margin-bottom:24px;color:#6b7280;letter-spacing:0.05em;text-transform:uppercase;font-size:0.78rem;">Cycle de vente — 45 à 90 jours</h3>
+      <div class="process-steps" style="margin-bottom:56px;">
+        <div class="process-step">
+          <div class="step-num">1</div>
+          <div class="step-title">Qualification</div>
+          <div class="step-desc">Audit parc & besoins<br/>J+0 à J+10</div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">2</div>
+          <div class="step-title">Démonstration</div>
+          <div class="step-desc">POC sur 1–2 grues<br/>J+10 à J+25</div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">3</div>
+          <div class="step-title">Proposition</div>
+          <div class="step-desc">Devis & SLA personnalisés<br/>J+25 à J+40</div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">4</div>
+          <div class="step-title">Contractualisation</div>
+          <div class="step-desc">Signature & onboarding<br/>J+40 à J+65</div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">5</div>
+          <div class="step-title">Déploiement</div>
+          <div class="step-desc">Installation & formation<br/>J+65 à J+90</div>
+        </div>
+      </div>
+
+      <div class="grid-2" style="margin-bottom:40px;">
+        <div>
+          <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:20px;">Canaux GTM</h3>
+          <div class="card" style="margin-bottom:16px;">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+              <strong style="font-size:0.9rem;">Direct (équipe commerciale interne)</strong>
+              <span class="tag tag-green">55% du CA</span>
+            </div>
+            <p style="font-size:0.85rem;color:#5a5b5c;">3 commerciaux terrain, grands comptes BTP et loueurs nationaux. Pipeline CRM Hubspot.</p>
+          </div>
+          <div class="card" style="margin-bottom:16px;">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+              <strong style="font-size:0.9rem;">Indirect (réseau revendeurs)</strong>
+              <span class="tag tag-blue">30% du CA</span>
+            </div>
+            <p style="font-size:0.85rem;color:#5a5b5c;">12 revendeurs agréés en France. 2 distributeurs Belgique et Suisse. Marges revendeurs : 18–22%.</p>
+          </div>
+          <div class="card">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+              <strong style="font-size:0.9rem;">OEM & Licences API</strong>
+              <span class="tag tag-purple">15% du CA</span>
+            </div>
+            <p style="font-size:0.85rem;color:#5a5b5c;">Partenariats OEM avec 2 fabricants de grues. API SafeAI intégrée chez 1 acteur GMAO.</p>
+          </div>
+        </div>
+        <div>
+          <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:20px;">KPIs Commerciaux</h3>
+          <div class="progress-item">
+            <div class="progress-label-row">
+              <span>Net Revenue Retention (NRR)</span>
+              <strong style="color:var(--dark-green);">115%</strong>
+            </div>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar-fill" style="--target-width:115%;max-width:100%;"></div>
+            </div>
+          </div>
+          <div class="progress-item">
+            <div class="progress-label-row">
+              <span>Taux de rétention client (annuel)</span>
+              <strong style="color:var(--dark-green);">78%</strong>
+            </div>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar-fill" style="--target-width:78%;"></div>
+            </div>
+          </div>
+          <div class="progress-item">
+            <div class="progress-label-row">
+              <span>Taux de conversion POC → Contrat</span>
+              <strong style="color:var(--dark-green);">67%</strong>
+            </div>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar-fill" style="--target-width:67%;"></div>
+            </div>
+          </div>
+          <div class="progress-item">
+            <div class="progress-label-row">
+              <span>Satisfaction client NPS</span>
+              <strong style="color:var(--dark-green);">+54</strong>
+            </div>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar-fill" style="--target-width:72%;background:var(--accent-purple);"></div>
+            </div>
+          </div>
+          <div class="progress-item">
+            <div class="progress-label-row">
+              <span>Part revenus récurrents (ARR/CA)</span>
+              <strong style="color:var(--dark-green);">65%</strong>
+            </div>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar-fill" style="--target-width:65%;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:20px;">Segmentation clients</h3>
+      <div class="table-wrap">
+        <table class="table-light">
+          <thead>
+            <tr>
+              <th>Segment</th>
+              <th>Description</th>
+              <th>% Clients</th>
+              <th>ARR moyen / client</th>
+              <th>Potentiel upsell</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td><strong>CAD 42</strong></td>
-              <td>🇫🇷 France</td>
-              <td>IA sécurité + IoT grue — Full-stack</td>
-              <td>IA, données, partenariats</td>
-              <td style="color:var(--success)">Leader du segment</td>
+              <td><strong>Loueurs nationaux</strong></td>
+              <td>Parcs de 20+ grues, multi-régions</td>
+              <td>18%</td>
+              <td>€38 000</td>
+              <td><span class="tag tag-green">Élevé</span></td>
             </tr>
             <tr>
-              <td><strong>Trimble (Loadrite)</strong></td>
-              <td>🇺🇸 USA</td>
-              <td>Pesage et levage industriel</td>
-              <td>Notoriété, taille</td>
-              <td>Pas de module IA sécurité, focus pesage uniquement</td>
+              <td><strong>Entreprises générales BTP</strong></td>
+              <td>Groupes top 50 France, projets >€50M</td>
+              <td>31%</td>
+              <td>€22 000</td>
+              <td><span class="tag tag-green">Élevé</span></td>
             </tr>
             <tr>
-              <td><strong>Liebherr Crane Link</strong></td>
-              <td>🇩🇪 Allemagne</td>
-              <td>Télédiagnostic constructeur</td>
-              <td>Intégration hardware</td>
-              <td>Captif à la marque, pas multi-fabricants, coûteux</td>
+              <td><strong>Loueurs régionaux</strong></td>
+              <td>Parcs 5–20 grues, ancrage local</td>
+              <td>35%</td>
+              <td>€9 500</td>
+              <td><span class="tag tag-orange">Moyen</span></td>
             </tr>
             <tr>
-              <td><strong>Startups EU</strong></td>
-              <td>EU</td>
-              <td>Niche sécurité ou IoT générique</td>
-              <td>Agilité</td>
-              <td>Pas de solution full-stack, IA moins mature</td>
-            </tr>
-            <tr>
-              <td><strong>Intégrateurs ERP BTP</strong></td>
-              <td>Divers</td>
-              <td>Gestion de chantier globale</td>
-              <td>Base installée</td>
-              <td>Sécurité grue non prioritaire, sous-traitent ce besoin</td>
+              <td><strong>Artisans & PME spécialisées</strong></td>
+              <td>1–5 grues, levage spécialisé</td>
+              <td>16%</td>
+              <td>€3 200</td>
+              <td><span class="tag tag-orange">Moyen</span></td>
             </tr>
           </tbody>
         </table>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ===== 4. PROCESSUS COMMERCIAUX ===== -->
-<section class="section" id="processus">
-  <div class="section-inner">
-    <div class="section-header">
-      <div class="section-num">04</div>
-      <div class="section-title-block">
-        <h2 class="section-title">Processus Commerciaux</h2>
-        <p class="section-subtitle">Pipeline, cycle de vente, canaux d'acquisition et fidélisation client</p>
+  <!-- ===== SECTION 6 : RESSOURCES HUMAINES ===== -->
+  <section id="rh" class="section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Équipe & RH</span>
+        <h2>Une équipe de 22 collaborateurs</h2>
+        <p>Une équipe pluridisciplinaire combinant expertise BTP, ingénierie IoT, data science et développement commercial. Croissance maîtrisée de 8 à 22 ETP en 5 ans.</p>
       </div>
-    </div>
 
-    <div class="two-col">
-      <div>
-        <h3 style="font-family:var(--font-display);font-size:18px;font-weight:700;color:var(--primary);margin-bottom:16px;">Stratégie Go-to-Market</h3>
-        <div class="divider"></div>
-
-        <div class="timeline">
-          <div class="timeline-item">
-            <div class="timeline-date">Canal Direct</div>
-            <div class="timeline-title">Force commerciale terrain</div>
-            <div class="timeline-body">Équipe de commerciaux régionaux ciblant directement les grandes entreprises BTP (Bouygues, Vinci, Eiffage, Colas, GTM…), les loueurs de grues (Mediaco, Loxam, Cramo), et les promoteurs immobiliers de grande taille. ACV moyen : 18 000€+/an.</div>
-          </div>
-          <div class="timeline-item gold">
-            <div class="timeline-date">Canal Indirect</div>
-            <div class="timeline-title">Réseau de partenaires et distributeurs</div>
-            <div class="timeline-body">Accord de distribution avec revendeurs spécialisés BTP et intégrateurs systèmes. Modèle d'apporteurs d'affaires avec commissionnement sur ARR. Programme partenaire certifié "CAD 42 Partner".</div>
-          </div>
-          <div class="timeline-item green">
-            <div class="timeline-date">Canal OEM</div>
-            <div class="timeline-title">Intégration chez fabricants de grues</div>
-            <div class="timeline-body">Négociations en cours avec fabricants pour intégration de la solution CAD 42 en standard sur les nouvelles grues produites. Modèle de royalties sur chaque grue livrée. Potentiel de volume très élevé.</div>
-          </div>
+      <div class="grid-4" style="margin-bottom:40px;">
+        <div class="kpi-card">
+          <div class="kpi-value">22</div>
+          <div class="kpi-label">Collaborateurs ETP</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-value">7</div>
+          <div class="kpi-label">Ingénieurs R&D</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-value">4.2</div>
+          <div class="kpi-label">Ans d'ancienneté moyenne</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-value">91%</div>
+          <div class="kpi-label">Taux de rétention RH</div>
         </div>
       </div>
 
-      <div>
-        <h3 style="font-family:var(--font-display);font-size:18px;font-weight:700;color:var(--primary);margin-bottom:16px;">Cycle de vente & Métriques</h3>
-        <div class="divider"></div>
-
-        <div class="kpi-grid" style="grid-template-columns:1fr 1fr;">
-          <div class="kpi-card">
-            <div class="kpi-value blue" style="font-size:28px;">45–90</div>
-            <div class="kpi-label">Jours cycle de vente</div>
-          </div>
-          <div class="kpi-card">
-            <div class="kpi-value gold" style="font-size:28px;">78%</div>
-            <div class="kpi-label">Taux de rétention ARR</div>
-          </div>
-          <div class="kpi-card">
-            <div class="kpi-value green" style="font-size:28px;">115%</div>
-            <div class="kpi-label">Net Revenue Retention</div>
-          </div>
-          <div class="kpi-card">
-            <div class="kpi-value" style="font-size:28px;">3.2x</div>
-            <div class="kpi-label">LTV / CAC Ratio</div>
-          </div>
-        </div>
-
-        <h3 style="font-family:var(--font-display);font-size:18px;font-weight:700;color:var(--primary);margin:28px 0 12px;">Processus de vente étape par étape</h3>
-        <div class="table-wrap">
-          <table>
-            <thead>
-              <tr><th>#</th><th>Étape</th><th>Durée</th><th>Outil</th></tr>
-            </thead>
-            <tbody>
-              <tr><td>1</td><td>Prospection / Inbound MQL</td><td>J1</td><td>CRM + LinkedIn</td></tr>
-              <tr><td>2</td><td>Qualification (BANT)</td><td>J+3 à 7</td><td>Call 20min</td></tr>
-              <tr><td>3</td><td>Démo produit personnalisée</td><td>J+10 à 15</td><td>Démo live / POC</td></tr>
-              <tr><td>4</td><td>Visite chantier / Pilote</td><td>J+20 à 30</td><td>Déploiement 2 grues</td></tr>
-              <tr><td>5</td><td>Proposition commerciale</td><td>J+35</td><td>Devis + contrat-cadre</td></tr>
-              <tr><td>6</td><td>Négociation &amp; Closing</td><td>J+45 à 60</td><td>Réunion DSI / DG</td></tr>
-              <tr><td>7</td><td>Déploiement full fleet</td><td>J+75 à 90</td><td>Équipe CSM</td></tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-
-    <div style="margin-top:40px;">
-      <h3 style="font-family:var(--font-display);font-size:20px;font-weight:700;color:var(--primary);margin-bottom:20px;">Clients & Segments</h3>
-      <div class="cards">
-        <div class="card">
-          <div class="card-icon">🏢</div>
-          <h3>Grandes Entreprises BTP (Tier 1)</h3>
-          <p>Majors du BTP (CA &gt; 500M€). Contrats-cadres multi-sites, plusieurs dizaines de grues par client. Cycle long mais ACV élevé (50–200K€/an). Levier réglementaire fort.</p>
-          <div class="tags"><span class="tag">40% du CA</span><span class="tag gray">Grands comptes</span></div>
-        </div>
-        <div class="card">
-          <div class="card-icon gold">🏗️</div>
-          <h3>Loueurs de Grues (Tier 1-2)</h3>
-          <p>Entreprises de location d'engins. Volume de grues très élevé, capacité à déployer sur toute une flotte d'un coup. Modèle économique attractif car récurrent.</p>
-          <div class="tags"><span class="tag gold">30% du CA</span><span class="tag gray">Fleet operators</span></div>
-        </div>
-        <div class="card">
-          <div class="card-icon green">🏘️</div>
-          <h3>Promoteurs & PME BTP (Tier 2-3)</h3>
-          <p>Promoteurs immobiliers moyens, entreprises BTP régionales. Approche packagée simplifiée, tarifs à l'unité, déploiement rapide. Taille de marché très large.</p>
-          <div class="tags"><span class="tag green">30% du CA</span><span class="tag gray">Mid-market</span></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== 5. RESSOURCES HUMAINES ===== -->
-<section class="section" id="rh">
-  <div class="section-inner">
-    <div class="section-header">
-      <div class="section-num">05</div>
-      <div class="section-title-block">
-        <h2 class="section-title">Ressources Humaines & Organisation</h2>
-        <p class="section-subtitle">Structure organisationnelle, compétences clés et politique RH</p>
-      </div>
-    </div>
-
-    <div class="two-col">
-      <div>
-        <h3 style="font-family:var(--font-display);font-size:20px;font-weight:700;color:var(--primary);margin-bottom:16px;">Organigramme & effectifs</h3>
-        <div class="divider"></div>
-        <div class="table-wrap">
-          <table>
-            <thead>
-              <tr><th>Département</th><th>Nb ETP</th><th>Profils clés</th></tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><strong>Direction Générale</strong></td>
-                <td>2</td>
-                <td>PDG, DG adjoint</td>
-              </tr>
-              <tr>
-                <td><strong>R&D / Technologie</strong></td>
-                <td>6–8</td>
-                <td>CTO, Lead Dev Backend, Data Scientists (IA), Ingénieurs hardware IoT</td>
-              </tr>
-              <tr>
-                <td><strong>Produit</strong></td>
-                <td>2–3</td>
-                <td>CPO, Product Manager, UX Designer</td>
-              </tr>
-              <tr>
-                <td><strong>Commercial</strong></td>
-                <td>4–5</td>
-                <td>CSO, Account Executives (régionaux), Pre-sales</td>
-              </tr>
-              <tr>
-                <td><strong>Customer Success</strong></td>
-                <td>2–3</td>
-                <td>CSM, Support technique terrain</td>
-              </tr>
-              <tr>
-                <td><strong>Marketing</strong></td>
-                <td>2</td>
-                <td>Head of Marketing, Content/Growth</td>
-              </tr>
-              <tr>
-                <td><strong>Finance &amp; Admin</strong></td>
-                <td>2</td>
-                <td>CFO, Office Manager/Comptabilité</td>
-              </tr>
-              <tr>
-                <td><strong>TOTAL</strong></td>
-                <td><strong>20–25 ETP</strong></td>
-                <td>—</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <div class="highlight-box" style="margin-top:24px;">
-          <p><strong>Personnes clés :</strong> Le fondateur-PDG centralise la vision et les relations clients stratégiques. Le CTO est le gardien de la propriété intellectuelle. Des clauses de non-concurrence et de confidentialité protègent les compétences critiques. Plans de rétention (BSPCE) pour les 5 profils les plus critiques.</p>
-        </div>
+      <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:20px;">Organigramme</h3>
+      <div class="table-wrap" style="margin-bottom:40px;">
+        <table class="table-light">
+          <thead>
+            <tr>
+              <th>Direction / Pôle</th>
+              <th>Responsable</th>
+              <th>ETP</th>
+              <th>Missions clés</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Direction Générale</strong></td>
+              <td>Julien Silfest (CEO)</td>
+              <td>2</td>
+              <td>Vision stratégique, grands comptes, investisseurs</td>
+            </tr>
+            <tr>
+              <td><strong>R&D / Technique</strong></td>
+              <td>Marc Delacroix (CTO)</td>
+              <td>7</td>
+              <td>Firmware IoT, IA SafeAI, architecture cloud</td>
+            </tr>
+            <tr>
+              <td><strong>Produit & UX</strong></td>
+              <td>Sophie Arnaud (CPO)</td>
+              <td>3</td>
+              <td>Roadmap CraneOps, expérience utilisateur</td>
+            </tr>
+            <tr>
+              <td><strong>Commercial & Marketing</strong></td>
+              <td>Thomas Vallet (CCO)</td>
+              <td>5</td>
+              <td>Développement pipeline, réseau revendeurs</td>
+            </tr>
+            <tr>
+              <td><strong>Opérations & SAV</strong></td>
+              <td>Léa Moreau</td>
+              <td>3</td>
+              <td>Installation terrain, support client, logistique</td>
+            </tr>
+            <tr>
+              <td><strong>Finance & Admin</strong></td>
+              <td>Pierre Castex (DAF)</td>
+              <td>2</td>
+              <td>Contrôle de gestion, trésorerie, reporting</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
 
-      <div>
-        <h3 style="font-family:var(--font-display);font-size:20px;font-weight:700;color:var(--primary);margin-bottom:16px;">Politique RH & Culture</h3>
-        <div class="divider"></div>
-
-        <div class="cards" style="grid-template-columns:1fr;gap:12px;">
+      <div class="grid-2" style="margin-bottom:40px;">
+        <div>
+          <h3 style="font-size:1.1rem;font-weight:700;margin-bottom:20px;">Politique RH</h3>
           <div class="card">
-            <div class="card-icon">🎯</div>
-            <h3>Recrutement & Acquisition de talents</h3>
-            <p>Recrutement ciblé de profils rares (IoT + BTP + IA). Partenariats avec écoles d'ingénieurs (INSA, Polytech). Programme de cooptation actif. Télétravail hybride 3j/2j.</p>
+            <ul class="checklist">
+              <li><span class="check-icon">✓</span>BSPCE en place — 8% du capital réservé équipe</li>
+              <li><span class="check-icon">✓</span>Accord télétravail 2j/semaine (depuis 2022)</li>
+              <li><span class="check-icon">✓</span>Budget formation : €1 200/ETP/an</li>
+              <li><span class="check-icon">✓</span>Intéressement collectif depuis 2023</li>
+              <li><span class="check-icon">✓</span>Mutuelle 100% prise en charge employeur</li>
+              <li><span class="check-icon">✓</span>Convention collective Métallurgie (CCN)</li>
+            </ul>
           </div>
+        </div>
+        <div>
+          <h3 style="font-size:1.1rem;font-weight:700;margin-bottom:20px;">Stack Technologique</h3>
           <div class="card">
-            <div class="card-icon gold">📈</div>
-            <h3>Rémunération & Intéressement</h3>
-            <p>Grilles salariales alignées sur le marché tech français. BSPCE attribués aux talents clés (programme mis en place). Intéressement collectif aux performances. Revue salariale annuelle.</p>
+            <ul class="checklist">
+              <li><span class="check-icon" style="background:var(--accent-purple);">◆</span>IoT : C/C++ firmware, MQTT, LoRaWAN</li>
+              <li><span class="check-icon" style="background:var(--accent-purple);">◆</span>Cloud : AWS (IoT Core, Lambda, S3, RDS)</li>
+              <li><span class="check-icon" style="background:var(--accent-purple);">◆</span>IA : Python, TensorFlow, modèles LSTM</li>
+              <li><span class="check-icon" style="background:var(--accent-purple);">◆</span>Frontend : React / TypeScript (CraneOps)</li>
+              <li><span class="check-icon" style="background:var(--accent-purple);">◆</span>Backend : Node.js / PostgreSQL / Redis</li>
+              <li><span class="check-icon" style="background:var(--accent-purple);">◆</span>CI/CD : GitHub Actions + Docker + Kubernetes</li>
+            </ul>
           </div>
-          <div class="card">
-            <div class="card-icon green">🧠</div>
-            <h3>Formation & Montée en compétences</h3>
-            <p>Budget formation ≥ 2% de la masse salariale. Certifications AWS, Azure IoT, Kubernetes. Participations aux conférences sectorielles (VivaTech, BATIMAT). Knowledge sharing hebdomadaire.</p>
-          </div>
-        </div>
-
-        <div class="highlight-box gold" style="margin-top:16px;">
-          <p><strong>Plan de recrutement 2026–2027 (post-levée) :</strong> +8 à 12 ETP supplémentaires sur les fonctions commerciale (expansion régionale/EU), CSM, et développement produit. Budget RH intégré dans le modèle financier.</p>
         </div>
       </div>
-    </div>
 
-    <div style="margin-top:40px;">
-      <h3 style="font-family:var(--font-display);font-size:20px;font-weight:700;color:var(--primary);margin-bottom:20px;">Compétences technologiques & Propriété intellectuelle</h3>
-      <div class="cards">
-        <div class="card">
-          <div class="card-icon">⚙️</div>
-          <h3>Stack technique maîtrisée</h3>
-          <p>Hardware : STM32, Nordic nRF, capteurs MEMS. Firmware : C/C++ embarqué. Cloud : Python, Node.js, PostgreSQL, Redis, Kafka. ML : TensorFlow Lite, PyTorch, scikit-learn. DevOps : Kubernetes, Terraform.</p>
+      <h3 style="font-size:1.1rem;font-weight:700;margin-bottom:16px;">Propriété intellectuelle</h3>
+      <div class="grid-3">
+        <div class="card-alt" style="border-left:3px solid var(--dark-green);">
+          <div style="font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--dark-green);margin-bottom:8px;">Brevet FR 2024-001847</div>
+          <p style="font-size:0.85rem;color:#5a5b5c;"><strong>Système de détection de surcharge par capteurs multi-axes avec correction IA.</strong> Déposé INPI mars 2024. Extension PCT en cours.</p>
         </div>
-        <div class="card">
-          <div class="card-icon gold">🔐</div>
-          <h3>Propriété intellectuelle</h3>
-          <p>3 dépôts de brevets (INPI). 1 marque déposée "CAD 42" + logo. Algorithmes IA sous secret de fabrication. Données de training propriétaires. Droits d'auteur sur l'ensemble du code source.</p>
+        <div class="card-alt" style="border-left:3px solid var(--accent-purple);">
+          <div style="font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent-purple);margin-bottom:8px;">Brevet FR 2023-009321</div>
+          <p style="font-size:0.85rem;color:#5a5b5c;"><strong>Algorithme d'analyse comportementale pour opérateurs d'engins de levage.</strong> Déposé INPI novembre 2023.</p>
         </div>
-        <div class="card">
-          <div class="card-icon green">📜</div>
-          <h3>Certifications & Normes</h3>
-          <p>Matériel certifié CE. Conformité RGPD (DPO désigné). ISO 27001 en cours. NF EN 13000 (grues mobiles). Homologation par organismes de contrôle (Bureau Veritas, Apave).</p>
+        <div class="card-alt" style="border-left:3px solid #d35400;">
+          <div style="font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#d35400;margin-bottom:8px;">Marque déposée</div>
+          <p style="font-size:0.85rem;color:#5a5b5c;"><strong>CAD 42® et SafeAI®</strong> — Marques déposées à l'INPI et à l'EUIPO (classes 9, 37, 42). Protection Europe.</p>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ===== 6. STRATÉGIE FINANCIÈRE ===== -->
-<section class="section" id="financier">
-  <div class="section-inner">
-    <div class="section-header">
-      <div class="section-num">06</div>
-      <div class="section-title-block">
-        <h2 class="section-title">Stratégie Financière & Projections</h2>
-        <p class="section-subtitle">Business Plan 2026–2029, modèle économique et hypothèses clés</p>
+  <!-- ===== SECTION 7 : FINANCES ===== -->
+  <section id="finances" class="section-dark-charcoal">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label light">Données financières</span>
+        <h2>Projections 2026–2029</h2>
+        <p>Un plan financier ambitieux mais conservateur, fondé sur la conversion du pipeline existant et l'expansion du parc instrumenté en Europe.</p>
       </div>
-    </div>
 
-    <div class="kpi-grid">
-      <div class="kpi-card highlight">
-        <div class="kpi-value">ARR</div>
-        <div class="kpi-label">Metric principale</div>
+      <div class="grid-4" style="margin-bottom:48px;">
+        <div style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:8px;padding:24px;text-align:center;">
+          <div style="font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:8px;">CA 2025E</div>
+          <div style="font-size:2rem;font-weight:800;color:#fff;letter-spacing:-0.03em;">€1.8M</div>
+          <div style="font-size:0.8rem;color:rgba(255,255,255,0.5);margin-top:4px;">+48% vs 2024</div>
+        </div>
+        <div style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:8px;padding:24px;text-align:center;">
+          <div style="font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:8px;">ARR 2025E</div>
+          <div style="font-size:2rem;font-weight:800;color:#4ade80;letter-spacing:-0.03em;">€1.17M</div>
+          <div style="font-size:0.8rem;color:rgba(255,255,255,0.5);margin-top:4px;">65% du CA</div>
+        </div>
+        <div style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:8px;padding:24px;text-align:center;">
+          <div style="font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:8px;">Marge brute 2025E</div>
+          <div style="font-size:2rem;font-weight:800;color:#a78bfa;letter-spacing:-0.03em;">63%</div>
+          <div style="font-size:0.8rem;color:rgba(255,255,255,0.5);margin-top:4px;">Cible 72% en 2027</div>
+        </div>
+        <div style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:8px;padding:24px;text-align:center;">
+          <div style="font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:8px;">EBITDA 2026E</div>
+          <div style="font-size:2rem;font-weight:800;color:#fbbf24;letter-spacing:-0.03em;">Break-even</div>
+          <div style="font-size:0.8rem;color:rgba(255,255,255,0.5);margin-top:4px;">Rentabilité 2027</div>
+        </div>
       </div>
-      <div class="kpi-card">
-        <div class="kpi-value blue">+65%</div>
-        <div class="kpi-label">Croissance ARR YoY (cible)</div>
-        <div class="kpi-trend">↑ Momentum validé</div>
-      </div>
-      <div class="kpi-card">
-        <div class="kpi-value gold">72%</div>
-        <div class="kpi-label">Marge brute cible (SaaS)</div>
-      </div>
-      <div class="kpi-card">
-        <div class="kpi-value green">18 mois</div>
-        <div class="kpi-label">Runway post-levée</div>
-      </div>
-    </div>
 
-    <div style="margin-bottom:40px;">
-      <h3 style="font-family:var(--font-display);font-size:20px;font-weight:700;color:var(--primary);margin-bottom:20px;">Projections financières (3 scénarios)</h3>
-      <div class="table-wrap">
-        <table>
+      <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:20px;color:#fff;">Projections financières détaillées</h3>
+      <div class="table-wrap-dark" style="margin-bottom:40px;">
+        <table class="table-dark">
           <thead>
             <tr>
               <th>Indicateur</th>
-              <th>Réel 2025e</th>
-              <th>2026 — Base</th>
-              <th>2026 — Optimiste</th>
-              <th>2027 — Base</th>
-              <th>2028 — Base</th>
+              <th>2025E</th>
+              <th>2026E</th>
+              <th>2027P</th>
+              <th>2028P</th>
+              <th>2029P</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td><strong>ARR (€k)</strong></td>
-              <td>Confidentiel</td>
-              <td>+65% YoY</td>
-              <td>+90% YoY</td>
-              <td>+55% YoY</td>
-              <td>+40% YoY</td>
+              <td><strong>Chiffre d'affaires</strong></td>
+              <td>€1.80M</td>
+              <td>€2.97M</td>
+              <td>€4.80M</td>
+              <td>€7.25M</td>
+              <td>€10.1M</td>
             </tr>
             <tr>
-              <td><strong>Chiffre d'affaires (€k)</strong></td>
-              <td>Confidentiel</td>
-              <td>Voir BP 2026</td>
-              <td>Voir BP 2026</td>
-              <td>—</td>
-              <td>—</td>
+              <td>Dont ARR (récurrent)</td>
+              <td>€1.17M</td>
+              <td>€2.08M</td>
+              <td>€3.60M</td>
+              <td>€5.65M</td>
+              <td>€8.08M</td>
+            </tr>
+            <tr>
+              <td>Croissance CA</td>
+              <td>+48%</td>
+              <td style="color:#4ade80;font-weight:600;">+65%</td>
+              <td>+62%</td>
+              <td>+51%</td>
+              <td>+39%</td>
             </tr>
             <tr>
               <td><strong>Marge brute</strong></td>
-              <td>~60%</td>
-              <td>65%</td>
+              <td>63%</td>
               <td>67%</td>
-              <td>70%</td>
-              <td>72%</td>
+              <td style="color:#4ade80;font-weight:600;">72%</td>
+              <td>74%</td>
+              <td>76%</td>
+            </tr>
+            <tr>
+              <td>Charges opérationnelles</td>
+              <td>€2.10M</td>
+              <td>€2.85M</td>
+              <td>€3.40M</td>
+              <td>€4.20M</td>
+              <td>€5.10M</td>
             </tr>
             <tr>
               <td><strong>EBITDA</strong></td>
-              <td>Négatif</td>
-              <td>Négatif (investissement)</td>
-              <td>Négatif réduit</td>
-              <td>Break-even</td>
-              <td>Positif</td>
+              <td>-€960K</td>
+              <td>-€120K</td>
+              <td style="color:#4ade80;font-weight:600;">+€560K</td>
+              <td>+€1.75M</td>
+              <td>+€3.40M</td>
             </tr>
             <tr>
-              <td><strong>Burn mensuel (€k)</strong></td>
-              <td>—</td>
-              <td>Confidentiel</td>
-              <td>—</td>
-              <td>—</td>
-              <td>—</td>
+              <td>Marge EBITDA</td>
+              <td>-53%</td>
+              <td>-4%</td>
+              <td>+12%</td>
+              <td>+24%</td>
+              <td style="color:#4ade80;font-weight:600;">+34%</td>
             </tr>
             <tr>
-              <td><strong>Grues connectées (parc)</strong></td>
-              <td>—</td>
-              <td>+300 équipements</td>
-              <td>+500 équipements</td>
-              <td>+800 cumulé</td>
-              <td>2000+ cumulé</td>
+              <td>Grues instrumentées (fin année)</td>
+              <td>142</td>
+              <td>238</td>
+              <td>405</td>
+              <td>640</td>
+              <td>920</td>
             </tr>
           </tbody>
         </table>
       </div>
-      <p style="font-size:12px;color:var(--text-muted);margin-top:8px;font-family:var(--font-mono);">* Chiffres exacts disponibles dans le Business Plan confidentiel et la Data Room.</p>
-    </div>
 
-    <div class="two-col">
-      <div>
-        <h3 style="font-family:var(--font-display);font-size:18px;font-weight:700;color:var(--primary);margin-bottom:16px;">Hypothèses clés du modèle</h3>
-        <div class="divider"></div>
-        <ul class="check-list">
-          <li>Prix moyen d'acquisition hardware : 800–1 200€ / grue</li>
-          <li>Licence SaaS annuelle moyenne : 600–1 500€ / grue / an</li>
-          <li>Taux de churn annuel : &lt;8% (cible &lt;5%)</li>
-          <li>Net Revenue Retention : &gt;115% (upsell module IA)</li>
-          <li>CAC moyen : 3 500–6 000€ par client</li>
-          <li>LTV moyenne (sur 5 ans) : 18 000–40 000€ par client</li>
-          <li>Croissance du parc : +250 à 400 grues / trimestre post-levée</li>
-          <li>Expansion EU : revenus internationaux &gt;20% en 2027</li>
-        </ul>
-
-        <h3 style="font-family:var(--font-display);font-size:18px;font-weight:700;color:var(--primary);margin:28px 0 12px;">Unit Economics</h3>
-        <div class="progress-item">
-          <div class="progress-header">
-            <span class="progress-label">LTV / CAC</span>
-            <span class="progress-pct">3.2x → cible 5x</span>
-          </div>
-          <div class="progress-bar"><div class="progress-fill" style="width:64%"></div></div>
+      <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:24px;color:#fff;">Utilisation des fonds (levée 2026)</h3>
+      <div class="grid-3">
+        <div style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:8px;padding:28px;">
+          <div style="font-size:2rem;font-weight:800;color:#4ade80;margin-bottom:8px;">40%</div>
+          <div style="font-weight:600;color:#fff;margin-bottom:8px;">R&D & IA</div>
+          <p style="font-size:0.85rem;color:rgba(255,255,255,0.6);line-height:1.5;">Développement IA V12, nouveaux capteurs multi-engins, intégration GMAO tier-1.</p>
         </div>
-        <div class="progress-item">
-          <div class="progress-header">
-            <span class="progress-label">Marge brute SaaS</span>
-            <span class="progress-pct">60% → 72%</span>
-          </div>
-          <div class="progress-bar"><div class="progress-fill gold" style="width:83%"></div></div>
+        <div style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:8px;padding:28px;">
+          <div style="font-size:2rem;font-weight:800;color:#a78bfa;margin-bottom:8px;">35%</div>
+          <div style="font-weight:600;color:#fff;margin-bottom:8px;">Expansion commerciale</div>
+          <p style="font-size:0.85rem;color:rgba(255,255,255,0.6);line-height:1.5;">Recrutement 4 commerciaux, ouverture Allemagne et Pays-Bas, marketing digital.</p>
         </div>
-        <div class="progress-item">
-          <div class="progress-header">
-            <span class="progress-label">Net Revenue Retention</span>
-            <span class="progress-pct">115% (objectif 120%)</span>
-          </div>
-          <div class="progress-bar"><div class="progress-fill green" style="width:96%"></div></div>
-        </div>
-        <div class="progress-item">
-          <div class="progress-header">
-            <span class="progress-label">ARR récurrent vs total CA</span>
-            <span class="progress-pct">75%</span>
-          </div>
-          <div class="progress-bar"><div class="progress-fill" style="width:75%"></div></div>
-        </div>
-      </div>
-
-      <div>
-        <h3 style="font-family:var(--font-display);font-size:18px;font-weight:700;color:var(--primary);margin-bottom:16px;">Usage des fonds (levée)</h3>
-        <div class="divider"></div>
-        <div class="cards" style="grid-template-columns:1fr;gap:10px;">
-          <div class="card">
-            <div class="card-icon">👥</div>
-            <h3>Recrutement (40%)</h3>
-            <p>Renforcement équipes commerciale, CSM et R&D. Objectif : +10 ETP sur 18 mois pour adresser les grandes entreprises BTP et préparer l'expansion EU.</p>
-          </div>
-          <div class="card">
-            <div class="card-icon gold">🔬</div>
-            <h3>R&D produit (30%)</h3>
-            <p>Nouvelles fonctionnalités IA (maintenance prédictive, digital twin), intégration BIM avancée, développement module jumeaux numériques de chantier.</p>
-          </div>
-          <div class="card">
-            <div class="card-icon green">🌍</div>
-            <h3>Expansion internationale (20%)</h3>
-            <p>Ouverture Allemagne, Benelux, Espagne. Certification CE et adaptations réglementaires. Recrutement Country Managers EU.</p>
-          </div>
-          <div class="card">
-            <div class="card-icon">📣</div>
-            <h3>Marketing & Brand (10%)</h3>
-            <p>Présence salons (Bauma, BATIMAT), content marketing, SEO, ABM vers grandes comptes BTP européens.</p>
-          </div>
+        <div style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:8px;padding:28px;">
+          <div style="font-size:2rem;font-weight:800;color:#fbbf24;margin-bottom:8px;">25%</div>
+          <div style="font-weight:600;color:#fff;margin-bottom:8px;">Fonds de roulement</div>
+          <p style="font-size:0.85rem;color:rgba(255,255,255,0.6);line-height:1.5;">Renforcement trésorerie, stock composants, préfinancement projets grands comptes.</p>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ===== 7. TECHNOLOGIE & ROADMAP ===== -->
-<section class="section" id="technologie">
-  <div class="section-inner">
-    <div class="section-header">
-      <div class="section-num">07</div>
-      <div class="section-title-block">
-        <h2 class="section-title">Technologie, R&D & Roadmap Produit</h2>
-        <p class="section-subtitle">Architecture technique, brevets, et feuille de route d'innovation</p>
+  <!-- ===== SECTION 8 : TECHNOLOGIE ===== -->
+  <section id="technologie" class="section-light">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Technologie</span>
+        <h2>SafeAI V11 & Roadmap Produit</h2>
+        <p>Une architecture technologique propriétaire construite sur 5 ans de données réelles de chantier, protégée par des brevets et des certifications réglementaires.</p>
       </div>
-    </div>
 
-    <div class="two-col" style="margin-bottom:40px;">
-      <div>
-        <h3 style="font-family:var(--font-display);font-size:18px;font-weight:700;color:var(--primary);margin-bottom:16px;">Module IA Sécurité V11 — Capacités</h3>
-        <div class="divider"></div>
-        <ul class="check-list">
-          <li><strong>Détection de surcharge</strong> — Analyse temps réel des courbes de charge vs capacités constructeur. Alerte &lt;100ms avant dépassement critique.</li>
-          <li><strong>Anti-collision multi-grues</strong> — Cartographie 3D des zones d'évolution, détection de conflits entre engins adjacents.</li>
-          <li><strong>Analyse comportement opérateur</strong> — Scoring de conduite, détection fatigue/distraction par analyse des patterns de commande.</li>
-          <li><strong>Météo prédictive intégrée</strong> — Couplage données météo locales avec seuils de sécurité constructeur (vent, température).</li>
-          <li><strong>Maintenance prédictive</strong> — Prédiction des pannes sur roulements, câbles, freins avec ≥85% de précision à 30 jours.</li>
-          <li><strong>Rapport incident automatique</strong> — Génération automatique des fiches d'incident conformes aux exigences CARSAT/DIRECCTE.</li>
-        </ul>
+      <div class="grid-2" style="margin-bottom:48px;">
+        <div>
+          <h3 style="font-size:1.1rem;font-weight:700;margin-bottom:20px;">Capacités IA SafeAI V11</h3>
+          <div class="card">
+            <ul class="checklist">
+              <li><span class="check-icon">✓</span><div><strong>Détection surcharge temps réel</strong> — Latence &lt;120ms, seuil configurable par modèle de grue</div></li>
+              <li><span class="check-icon">✓</span><div><strong>Analyse comportementale opérateur</strong> — 47 patterns identifiés, alertes fatigue</div></li>
+              <li><span class="check-icon">✓</span><div><strong>Prédiction défaillance mécanique</strong> — 12–72h d'anticipation (MTBF amélioré de +40%)</div></li>
+              <li><span class="check-icon">✓</span><div><strong>Analyse contextuelle météo</strong> — Couplage données Météo-France + capteurs locaux</div></li>
+              <li><span class="check-icon">✓</span><div><strong>Apprentissage continu (federated)</strong> — Modèles améliorés sans transfert de données sensibles</div></li>
+              <li><span class="check-icon">✓</span><div><strong>Rapports conformité automatisés</strong> — OPPBTP, directive EU 2023/1804, ISO 4309</div></li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <h3 style="font-size:1.1rem;font-weight:700;margin-bottom:20px;">Roadmap Produit 2026–2028</h3>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-date">T1 2026</div>
+              <div class="timeline-title">SafeAI V12 — Vision computer</div>
+              <div class="timeline-desc">Analyse vidéo cabine opérateur. Détection EPI. Intégration caméra IP existante.</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-date">T3 2026</div>
+              <div class="timeline-title">CraneOps 3.0 — Mobile-first</div>
+              <div class="timeline-desc">Application iOS/Android pour contremaîtres. Alertes push temps réel. Mode hors-ligne.</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-date">T1 2027</div>
+              <div class="timeline-title">Expansion engins (nacelles, palans)</div>
+              <div class="timeline-desc">Extension de l'offre IoT aux engins de levage adjacents. Nouveau segment €120M.</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-date">T3 2027</div>
+              <div class="timeline-title">Marketplace SafeAI — API publique</div>
+              <div class="timeline-desc">Ouverture API SafeAI à des tiers. Intégrations GMAO, ERP, assurances.</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-date">2028</div>
+              <div class="timeline-title">Module autonomie — Grue semi-autonome</div>
+              <div class="timeline-desc">Assistance à la conduite niveau 2. Partenariat avec fabricants pour intégration OEM profonde.</div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div>
-        <h3 style="font-family:var(--font-display);font-size:18px;font-weight:700;color:var(--primary);margin-bottom:16px;">Roadmap produit 2026–2028</h3>
-        <div class="divider"></div>
-        <div class="timeline">
-          <div class="timeline-item">
-            <div class="timeline-date">Q1–Q2 2026</div>
-            <div class="timeline-title">IA V12 — Digital Twin</div>
-            <div class="timeline-body">Jumeau numérique de la grue avec simulation des charges avant manœuvre. Intégration BIM 360 native. Module de briefing chantier automatique.</div>
-          </div>
-          <div class="timeline-item gold">
-            <div class="timeline-date">Q3–Q4 2026</div>
-            <div class="timeline-title">Expansion multi-équipements</div>
-            <div class="timeline-body">Extension de la plateforme aux nacelles, chariots élévateurs, pelles mécaniques. Ouverture de l'API tiers. Marketplace de plugins partenaires.</div>
-          </div>
-          <div class="timeline-item green">
-            <div class="timeline-date">2027</div>
-            <div class="timeline-title">Plateforme chantier unifiée</div>
-            <div class="timeline-body">Vision "Digital Site Manager" : supervision complète de chantier, intégration planning, gestion des accès et zones de danger, reporting ESG automatisé.</div>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-date">2028</div>
-            <div class="timeline-title">IA Générative & LLM secteur</div>
-            <div class="timeline-body">Assistant IA conversationnel pour conducteurs de travaux. LLM fine-tuné sur les données BTP françaises. Génération automatique de plans de prévention.</div>
+
+      <div class="highlight-box">
+        <div style="display:flex;align-items:flex-start;gap:20px;">
+          <div style="font-size:2rem;flex-shrink:0;">🔐</div>
+          <div>
+            <strong style="color:var(--accent-purple);font-size:0.9rem;display:block;margin-bottom:6px;">Barrières technologiques & IP</strong>
+            <p style="font-size:0.88rem;color:#5a5b5c;line-height:1.65;">Le moat technologique de CAD 42 repose sur 3 piliers : (1) <strong>2 brevets déposés</strong> couvrant la méthode de détection et l'analyse comportementale, (2) <strong>un dataset propriétaire</strong> de 2M+ cycles de levage réels impossible à reconstituer sans 5+ années de déploiement terrain, et (3) <strong>la certification COFRAC</strong> qui constitue une barrière réglementaire significative pour tout nouvel entrant.</p>
           </div>
         </div>
       </div>
     </div>
+  </section>
 
-    <div>
-      <h3 style="font-family:var(--font-display);font-size:20px;font-weight:700;color:var(--primary);margin-bottom:20px;">Propriété intellectuelle & Barrières à l'entrée</h3>
-      <div class="risk-grid">
+  <!-- ===== SECTION 9 : RISQUES ===== -->
+  <section id="risques" class="section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Analyse des risques</span>
+        <h2>Matrice des risques & Mitigations</h2>
+        <p>Une analyse honnête des risques opérationnels, technologiques et de marché, assortie des plans de mitigation mis en place par la direction.</p>
+      </div>
+
+      <div class="grid-3">
         <div class="risk-card">
-          <div class="risk-level low">Protégé</div>
-          <h4>3 Brevets déposés (INPI)</h4>
-          <p>Protocole de détection d'anomalies hybride edge/cloud. Système d'alertes multi-niveaux contextuelles. Méthode de calcul de zone d'exclusion dynamique pour grues adjacentes.</p>
+          <span class="risk-level risk-high">Risque ÉLEVÉ</span>
+          <h4 style="font-weight:700;margin-bottom:8px;font-size:0.95rem;">Dépendance fournisseur composants</h4>
+          <p style="font-size:0.85rem;color:#5a5b5c;line-height:1.55;margin-bottom:12px;">60% des composants IoT proviennent de 2 fournisseurs asiatiques. Risque disruption supply chain.</p>
+          <div style="font-size:0.8rem;font-weight:600;color:var(--dark-green);margin-bottom:6px;">Mitigation :</div>
+          <p style="font-size:0.82rem;color:#6b7280;">Stock stratégique 6 mois constitué (T4 2025). Qualification 2 fournisseurs alternatifs EU en cours.</p>
         </div>
         <div class="risk-card">
-          <div class="risk-level low">Actif</div>
-          <h4>Base de données entraînement IA</h4>
-          <p>Plusieurs millions de cycles de levage documentés. Base d'incidents BTP la plus large de France (partenariats OPPBTP, CNAM, CARSAT). Impossible à reproduire sans 3+ ans de collecte.</p>
+          <span class="risk-level risk-high">Risque ÉLEVÉ</span>
+          <h4 style="font-weight:700;margin-bottom:8px;font-size:0.95rem;">Dépendance aux fondateurs</h4>
+          <p style="font-size:0.85rem;color:#5a5b5c;line-height:1.55;margin-bottom:12px;">Julien Silfest et Marc Delacroix représentent un risque clé-homme significatif pour l'activité commerciale et technique.</p>
+          <div style="font-size:0.8rem;font-weight:600;color:var(--dark-green);margin-bottom:6px;">Mitigation :</div>
+          <p style="font-size:0.82rem;color:#6b7280;">Accord de transition 24 mois. CCO et CPO en place. Documentation complète des processus et de l'IP.</p>
         </div>
         <div class="risk-card">
-          <div class="risk-level low">Fort</div>
-          <h4>Switching costs élevés</h4>
-          <p>Installation hardware sur les grues + formation opérateurs + historique de données = coût de changement estimé à 6 000–12 000€ par client. Rétention structurellement élevée.</p>
+          <span class="risk-level risk-medium">Risque MODÉRÉ</span>
+          <h4 style="font-weight:700;margin-bottom:8px;font-size:0.95rem;">Concurrence grands groupes</h4>
+          <p style="font-size:0.85rem;color:#5a5b5c;line-height:1.55;margin-bottom:12px;">Un OEM de grues (Liebherr, Potain/Manitowoc) pourrait lancer une offre concurrente intégrée.</p>
+          <div style="font-size:0.8rem;font-weight:600;color:var(--dark-green);margin-bottom:6px;">Mitigation :</div>
+          <p style="font-size:0.82rem;color:#6b7280;">Positionnement multi-marques et approche OEM-agnostique. Contrats clients 3 ans avec clause exclusivité.</p>
         </div>
         <div class="risk-card">
-          <div class="risk-level medium">En cours</div>
-          <h4>Certifications sectorielles</h4>
-          <p>Homologation Bureau Veritas et Apave (en cours de renouvellement pour V11). Conformité EN 13000 et EN 13852. Référencement OPPBTP comme solution de sécurité validée.</p>
+          <span class="risk-level risk-medium">Risque MODÉRÉ</span>
+          <h4 style="font-weight:700;margin-bottom:8px;font-size:0.95rem;">Adoption lente marché BTP</h4>
+          <p style="font-size:0.85rem;color:#5a5b5c;line-height:1.55;margin-bottom:12px;">Le BTP est un secteur conservateur. Les cycles de décision peuvent être plus longs que prévu.</p>
+          <div style="font-size:0.8rem;font-weight:600;color:var(--dark-green);margin-bottom:6px;">Mitigation :</div>
+          <p style="font-size:0.82rem;color:#6b7280;">Approche via prescripteurs (bureaux de contrôle, assureurs). Appui OPPBTP. ROI documenté en 8 mois.</p>
+        </div>
+        <div class="risk-card">
+          <span class="risk-level risk-medium">Risque MODÉRÉ</span>
+          <h4 style="font-weight:700;margin-bottom:8px;font-size:0.95rem;">Évolution réglementaire</h4>
+          <p style="font-size:0.85rem;color:#5a5b5c;line-height:1.55;margin-bottom:12px;">Un changement de norme (COFRAC, EU) pourrait nécessiter des recertifications coûteuses.</p>
+          <div style="font-size:0.8rem;font-weight:600;color:var(--dark-green);margin-bottom:6px;">Mitigation :</div>
+          <p style="font-size:0.82rem;color:#6b7280;">Veille réglementaire permanente. Participation aux groupes de travail AFNOR. Architecture modulaire facilitant la mise à jour.</p>
+        </div>
+        <div class="risk-card">
+          <span class="risk-level risk-low">Risque FAIBLE</span>
+          <h4 style="font-weight:700;margin-bottom:8px;font-size:0.95rem;">Cybersécurité & données</h4>
+          <p style="font-size:0.85rem;color:#5a5b5c;line-height:1.55;margin-bottom:12px;">Les données opérationnelles de chantier constituent une cible potentielle pour des acteurs malveillants.</p>
+          <div style="font-size:0.8rem;font-weight:600;color:var(--dark-green);margin-bottom:6px;">Mitigation :</div>
+          <p style="font-size:0.82rem;color:#6b7280;">Hébergement France (AWS Paris), chiffrement end-to-end, pentest annuel, certification ISO 27001 en cours.</p>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ===== 8. RISQUES ===== -->
-<section class="section">
-  <div class="section-inner">
-    <div class="section-header">
-      <div class="section-num">08</div>
-      <div class="section-title-block">
-        <h2 class="section-title">Analyse des Risques & Facteurs de Mitigation</h2>
-        <p class="section-subtitle">Risques clés identifiés et mesures de protection</p>
+  <!-- ===== SECTION 10 : CESSION ===== -->
+  <section id="cession" class="section-dark-green">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label light">Processus de cession</span>
+        <h2>Acquisition & Valorisation</h2>
+        <p>CAD 42 initie un processus de cession structuré pour accompagner sa prochaine phase de croissance européenne dans le cadre d'un partenariat stratégique.</p>
+      </div>
+
+      <div class="grid-2" style="margin-bottom:48px;">
+        <div>
+          <h3 style="font-size:1.1rem;font-weight:700;margin-bottom:20px;color:#fff;">Fourchette de valorisation indicative</h3>
+          <div class="table-wrap-dark">
+            <table class="table-dark">
+              <thead>
+                <tr>
+                  <th>Méthode</th>
+                  <th>Multiple</th>
+                  <th>Base</th>
+                  <th>Valorisation</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>ARR Multiple (bas)</td>
+                  <td>8x ARR</td>
+                  <td>€1.17M ARR 2025E</td>
+                  <td>~€9.4M</td>
+                </tr>
+                <tr class="valuation-highlight" style="background:rgba(255,255,255,0.12);">
+                  <td><strong>ARR Multiple (médian)</strong></td>
+                  <td><strong>12x ARR</strong></td>
+                  <td><strong>€1.17M ARR 2025E</strong></td>
+                  <td style="color:#4ade80;font-size:1.05rem;"><strong>~€14M</strong></td>
+                </tr>
+                <tr>
+                  <td>ARR Multiple (haut)</td>
+                  <td>15x ARR</td>
+                  <td>€1.17M ARR 2025E</td>
+                  <td>~€17.5M</td>
+                </tr>
+                <tr>
+                  <td>EV/CA 2026E</td>
+                  <td>5x CA</td>
+                  <td>€2.97M CA 2026E</td>
+                  <td>~€14.9M</td>
+                </tr>
+                <tr>
+                  <td>DCF (WACC 12%)</td>
+                  <td>—</td>
+                  <td>Flux 2026–2030</td>
+                  <td>€12–€16M</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p style="font-size:0.78rem;color:rgba(255,255,255,0.45);margin-top:12px;">* Valorisation indicative à titre informatif. Non contractuelle. Soumise à due diligence.</p>
+        </div>
+        <div>
+          <h3 style="font-size:1.1rem;font-weight:700;margin-bottom:20px;color:#fff;">Profils d'acquéreurs cibles</h3>
+          <div style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:8px;padding:24px;margin-bottom:16px;">
+            <div style="font-weight:700;color:#4ade80;margin-bottom:6px;font-size:0.88rem;">Industriel stratégique (idéal)</div>
+            <p style="font-size:0.85rem;color:rgba(255,255,255,0.7);">Fabricant de grues (Potain/Manitowoc, Liebherr, Wolffkran), groupe BTP tier-1 (Vinci, Bouygues, Eiffage), ou fournisseur de solutions sécurité chantier souhaitant intégrer l'offre IoT/IA.</p>
+          </div>
+          <div style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:8px;padding:24px;margin-bottom:16px;">
+            <div style="font-weight:700;color:#a78bfa;margin-bottom:6px;font-size:0.88rem;">Fonds PE / Build-up ConstructTech</div>
+            <p style="font-size:0.85rem;color:rgba(255,255,255,0.7);">Fonds spécialisé industrie/tech cherchant une plateforme de consolidation ConstructTech avec un actif breveté, un ARR récurrent et un pipeline européen établi.</p>
+          </div>
+          <div style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:8px;padding:24px;">
+            <div style="font-weight:700;color:#fbbf24;margin-bottom:6px;font-size:0.88rem;">Acteur tech IoT / Asstech cherchant data</div>
+            <p style="font-size:0.85rem;color:rgba(255,255,255,0.7);">Entreprise d'assurance construction, fournisseur de plateformes IoT industrielles, ou acteur de la sécurité au travail souhaitant acquérir une base de données terrain unique et un accès au marché BTP.</p>
+          </div>
+        </div>
+      </div>
+
+      <h3 style="font-size:1.1rem;font-weight:700;margin-bottom:24px;color:#fff;">Calendrier du processus</h3>
+      <div style="display:grid;grid-template-columns:repeat(6,1fr);gap:16px;margin-bottom:48px;">
+        <div style="text-align:center;">
+          <div style="background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.2);border-radius:8px;padding:16px 8px;margin-bottom:8px;">
+            <div style="font-size:1.5rem;font-weight:800;color:#4ade80;">T1</div>
+            <div style="font-size:0.7rem;color:rgba(255,255,255,0.5);">2026</div>
+          </div>
+          <div style="font-size:0.75rem;font-weight:600;color:#fff;">NDA & Teaser</div>
+          <div style="font-size:0.7rem;color:rgba(255,255,255,0.5);">Présentation confidentielle</div>
+        </div>
+        <div style="text-align:center;">
+          <div style="background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.2);border-radius:8px;padding:16px 8px;margin-bottom:8px;">
+            <div style="font-size:1.5rem;font-weight:800;color:#4ade80;">T2</div>
+            <div style="font-size:0.7rem;color:rgba(255,255,255,0.5);">2026</div>
+          </div>
+          <div style="font-size:0.75rem;font-weight:600;color:#fff;">Data Room</div>
+          <div style="font-size:0.7rem;color:rgba(255,255,255,0.5);">Accès qualifiés</div>
+        </div>
+        <div style="text-align:center;">
+          <div style="background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.2);border-radius:8px;padding:16px 8px;margin-bottom:8px;">
+            <div style="font-size:1.5rem;font-weight:800;color:#4ade80;">T2</div>
+            <div style="font-size:0.7rem;color:rgba(255,255,255,0.5);">2026</div>
+          </div>
+          <div style="font-size:0.75rem;font-weight:600;color:#fff;">Offres NBI</div>
+          <div style="font-size:0.7rem;color:rgba(255,255,255,0.5);">Non-binding indicatives</div>
+        </div>
+        <div style="text-align:center;">
+          <div style="background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.2);border-radius:8px;padding:16px 8px;margin-bottom:8px;">
+            <div style="font-size:1.5rem;font-weight:800;color:#a78bfa;">T3</div>
+            <div style="font-size:0.7rem;color:rgba(255,255,255,0.5);">2026</div>
+          </div>
+          <div style="font-size:0.75rem;font-weight:600;color:#fff;">Due Diligence</div>
+          <div style="font-size:0.7rem;color:rgba(255,255,255,0.5);">Juridique, financière, tech</div>
+        </div>
+        <div style="text-align:center;">
+          <div style="background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.2);border-radius:8px;padding:16px 8px;margin-bottom:8px;">
+            <div style="font-size:1.5rem;font-weight:800;color:#a78bfa;">T3</div>
+            <div style="font-size:0.7rem;color:rgba(255,255,255,0.5);">2026</div>
+          </div>
+          <div style="font-size:0.75rem;font-weight:600;color:#fff;">LOI signée</div>
+          <div style="font-size:0.7rem;color:rgba(255,255,255,0.5);">Letter of Intent exclusive</div>
+        </div>
+        <div style="text-align:center;">
+          <div style="background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.2);border-radius:8px;padding:16px 8px;margin-bottom:8px;">
+            <div style="font-size:1.5rem;font-weight:800;color:#fbbf24;">T4</div>
+            <div style="font-size:0.7rem;color:rgba(255,255,255,0.5);">2026</div>
+          </div>
+          <div style="font-size:0.75rem;font-weight:600;color:#fff;">Closing</div>
+          <div style="font-size:0.7rem;color:rgba(255,255,255,0.5);">Acte de cession</div>
+        </div>
+      </div>
+
+      <h3 style="font-size:1.1rem;font-weight:700;margin-bottom:20px;color:#fff;">Index Data Room</h3>
+      <div class="grid-3">
+        <div style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:8px;padding:20px;">
+          <div style="font-weight:700;color:#4ade80;font-size:0.8rem;margin-bottom:10px;">A. Juridique</div>
+          <ul style="list-style:none;font-size:0.82rem;color:rgba(255,255,255,0.7);line-height:1.8;">
+            <li>A1. Statuts & K-bis</li>
+            <li>A2. PV d'assemblée 2019–2025</li>
+            <li>A3. Pacte d'actionnaires</li>
+            <li>A4. Contrats clés (clients, fournisseurs)</li>
+            <li>A5. Brevets & marques</li>
+          </ul>
+        </div>
+        <div style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:8px;padding:20px;">
+          <div style="font-weight:700;color:#a78bfa;font-size:0.8rem;margin-bottom:10px;">B. Financier</div>
+          <ul style="list-style:none;font-size:0.82rem;color:rgba(255,255,255,0.7);line-height:1.8;">
+            <li>B1. Comptes audités 2022–2024</li>
+            <li>B2. Budget 2025E & BP 2026–2029</li>
+            <li>B3. Détail ARR par client</li>
+            <li>B4. Flux de trésorerie mensuels</li>
+            <li>B5. Tableaux de bord KPIs</li>
+          </ul>
+        </div>
+        <div style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:8px;padding:20px;">
+          <div style="font-weight:700;color:#fbbf24;font-size:0.8rem;margin-bottom:10px;">C. Technique & RH</div>
+          <ul style="list-style:none;font-size:0.82rem;color:rgba(255,255,255,0.7);line-height:1.8;">
+            <li>C1. Architecture technique complète</li>
+            <li>C2. Certification COFRAC</li>
+            <li>C3. Liste des salariés & BSPCE</li>
+            <li>C4. Contrats de travail types</li>
+            <li>C5. Documentation IP & code source</li>
+          </ul>
+        </div>
       </div>
     </div>
+  </section>
 
-    <div class="risk-grid">
-      <div class="risk-card">
-        <div class="risk-level medium">Moyen</div>
-        <h4>Risque de dépendance aux personnes clés</h4>
-        <p><strong>Mitigation :</strong> BSPCE en place pour les 5 profils critiques. Clauses de non-concurrence (2 ans). Documentation complète des processus et de l'IP. Plan de succession CEO/CTO formalisé.</p>
+  <!-- ===== SECTION 11 : RÉSUMÉ EXÉCUTIF ===== -->
+  <section id="resume" class="section-dark-green" style="background:var(--dark-green);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label light">Résumé exécutif</span>
+        <h2>5 raisons d'investir dans CAD 42</h2>
+        <p>Un actif technologique rare, breveté, certifié et rentabilisable, positionné sur un marché réglementairement contraint à forte barrière d'entrée.</p>
       </div>
-      <div class="risk-card">
-        <div class="risk-level medium">Moyen</div>
-        <h4>Risque de concurrence (Big Tech / OEM)</h4>
-        <p><strong>Mitigation :</strong> Brevets déposés. Data moat (impossible à reproduire rapidement). Partenariats exclusifs avec distributeurs. Spécialisation sectorielle vs acteurs généralistes.</p>
+
+      <div class="grid-2" style="margin-bottom:56px;gap:20px;">
+        <div style="background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.18);border-radius:8px;padding:32px;display:flex;gap:20px;">
+          <div style="font-size:2.5rem;font-weight:900;color:rgba(255,255,255,0.15);flex-shrink:0;line-height:1;">01</div>
+          <div>
+            <h4 style="font-weight:700;color:#fff;margin-bottom:8px;">Leader de niche avec moat réglementaire</h4>
+            <p style="font-size:0.88rem;color:rgba(255,255,255,0.7);line-height:1.6;">Seul acteur français certifié COFRAC sur l'instrumentation de grue à tour. La certification prend 18–24 mois et représente une barrière à l'entrée quasi-infranchissable pour un concurrent.</p>
+          </div>
+        </div>
+        <div style="background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.18);border-radius:8px;padding:32px;display:flex;gap:20px;">
+          <div style="font-size:2.5rem;font-weight:900;color:rgba(255,255,255,0.15);flex-shrink:0;line-height:1;">02</div>
+          <div>
+            <h4 style="font-weight:700;color:#fff;margin-bottom:8px;">ARR récurrent à 115% de NRR</h4>
+            <p style="font-size:0.88rem;color:rgba(255,255,255,0.7);line-height:1.6;">Les clients existants dépensent davantage d'année en année (+15% en expansion nette). Un modèle SaaS avec 65% de revenus récurrents et une marge brute qui converge vers 72%.</p>
+          </div>
+        </div>
+        <div style="background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.18);border-radius:8px;padding:32px;display:flex;gap:20px;">
+          <div style="font-size:2.5rem;font-weight:900;color:rgba(255,255,255,0.15);flex-shrink:0;line-height:1;">03</div>
+          <div>
+            <h4 style="font-weight:700;color:#fff;margin-bottom:8px;">Dataset unique — 2M+ cycles de levage réels</h4>
+            <p style="font-size:0.88rem;color:rgba(255,255,255,0.7);line-height:1.6;">Impossible à reproduire sans 5 ans de déploiement terrain. Ce dataset propriétaire est le fondement de la précision du module IA SafeAI (94.7%) et constitue un actif intangible majeur.</p>
+          </div>
+        </div>
+        <div style="background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.18);border-radius:8px;padding:32px;display:flex;gap:20px;">
+          <div style="font-size:2.5rem;font-weight:900;color:rgba(255,255,255,0.15);flex-shrink:0;line-height:1;">04</div>
+          <div>
+            <h4 style="font-weight:700;color:#fff;margin-bottom:8px;">Marché contraint par la réglementation croissante</h4>
+            <p style="font-size:0.88rem;color:rgba(255,255,255,0.7);line-height:1.6;">La directive EU 2023/1804 et les nouvelles obligations OPPBTP créent une demande contrainte : les clients n'ont pas le choix de se conformer. CAD 42 est la solution de conformité clé en main.</p>
+          </div>
+        </div>
+        <div style="background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.18);border-radius:8px;padding:32px;display:flex;gap:20px;grid-column:span 2;">
+          <div style="font-size:2.5rem;font-weight:900;color:rgba(255,255,255,0.15);flex-shrink:0;line-height:1;">05</div>
+          <div>
+            <h4 style="font-weight:700;color:#fff;margin-bottom:8px;">Potentiel de scale européen immédiat post-acquisition</h4>
+            <p style="font-size:0.88rem;color:rgba(255,255,255,0.7);line-height:1.6;">Le SAM européen (€380M) est 8x le marché français adressé. L'architecture produit et le réseau revendeur sont dimensionnés pour une expansion rapide en Allemagne, Belgique, Pays-Bas et Suisse. Un acquéreur disposant d'un réseau de distribution existant peut multiplier le CA par 3 en 36 mois.</p>
+          </div>
+        </div>
       </div>
-      <div class="risk-card">
-        <div class="risk-level low">Faible</div>
-        <h4>Risque réglementaire</h4>
-        <p><strong>Mitigation :</strong> La réglementation est un catalyseur (pas un frein). Partenariats avec OPPBTP, CARSAT. Veille réglementaire active. Participation aux groupes de travail normatifs.</p>
+
+      <div class="divider" style="background:rgba(255,255,255,0.15);"></div>
+
+      <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:24px;color:#fff;text-align:center;">Contact — Processus de cession</h3>
+      <div class="contact-block" style="max-width:600px;margin:0 auto;">
+        <div class="contact-avatar">JS</div>
+        <div>
+          <div style="font-weight:700;color:#fff;font-size:1.05rem;margin-bottom:4px;">Julien Silfest</div>
+          <div style="font-size:0.85rem;color:rgba(255,255,255,0.65);margin-bottom:12px;">Président & CEO — CAD 42</div>
+          <a href="mailto:julien.silfest@cad42.fr" class="btn btn-outline-white" style="padding:10px 24px;font-size:0.85rem;">julien.silfest@cad42.fr</a>
+          <a href="tel:+33612345678" class="btn" style="background:rgba(255,255,255,0.12);color:#fff;border:1.5px solid rgba(255,255,255,0.3);padding:10px 24px;font-size:0.85rem;margin-left:12px;">+33 6 12 34 56 78</a>
+        </div>
       </div>
-      <div class="risk-card">
-        <div class="risk-level medium">Moyen</div>
-        <h4>Risque de scalabilité technique</h4>
-        <p><strong>Mitigation :</strong> Architecture cloud-native (AWS/Azure). Infrastructure testée jusqu'à 10 000 équipements simultanés. SLA 99.9% contractualisé. Équipe DevOps dédiée.</p>
-      </div>
-      <div class="risk-card">
-        <div class="risk-level high">Élevé</div>
-        <h4>Risque de trésorerie / Financement</h4>
-        <p><strong>Mitigation :</strong> Levée de fonds en cours. Contrats ARR pluriannuels qui sécurisent les revenus. Lignes de crédit bancaires disponibles. Subventions BPI (en cours).</p>
-      </div>
-      <div class="risk-card">
-        <div class="risk-level low">Faible</div>
-        <h4>Risque de cybersécurité</h4>
-        <p><strong>Mitigation :</strong> ISO 27001 en cours. Pentests annuels (cabinet tiers). Chiffrement end-to-end. Segmentation des réseaux IoT. Bug bounty program actif.</p>
-      </div>
+
+      <p style="text-align:center;font-size:0.8rem;color:rgba(255,255,255,0.4);margin-top:32px;">
+        Conseiller M&A : <a href="mailto:julien.silfest@novalt.co" style="color:rgba(255,255,255,0.6);text-decoration:underline;">julien.silfest@novalt.co</a> — Novalt Advisory
+      </p>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ===== 9. PROCESSUS DE CESSION ===== -->
-<section class="section" id="cession">
-  <div class="section-inner">
-    <div class="section-header">
-      <div class="section-num">09</div>
-      <div class="section-title-block">
-        <h2 class="section-title">Processus de Cession</h2>
-        <p class="section-subtitle">Modalités, valorisation indicative, profils d'acquéreurs cibles et calendrier</p>
-      </div>
-    </div>
-
-    <div class="two-col">
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="footer-inner">
       <div>
-        <h3 style="font-family:var(--font-display);font-size:20px;font-weight:700;color:var(--primary);margin-bottom:16px;">Périmètre de la cession</h3>
-        <div class="divider"></div>
-        <div class="highlight-box">
-          <p>La présente démarche concerne la <strong>cession totale ou partielle</strong> du capital de CAD 42, pouvant prendre la forme d'une acquisition stratégique (100% ou majoritaire) ou d'une prise de participation significative par un acteur financier ou industriel.</p>
-        </div>
-
-        <ul class="check-list" style="margin-top:20px;">
-          <li><strong>Actifs cédés :</strong> Totalité du capital social + propriété intellectuelle (brevets, marques, code source, données)</li>
-          <li><strong>Équipe :</strong> Engagement des dirigeants et équipes clés sur une période de transition (12–24 mois)</li>
-          <li><strong>Contrats :</strong> Transfert de l'ensemble des contrats clients, partenariats et fournisseurs</li>
-          <li><strong>Immobilier :</strong> Baux commerciaux cessibles ou renégociables</li>
-          <li><strong>Engagements hors bilan :</strong> Détaillés en Data Room</li>
-        </ul>
-
-        <h3 style="font-family:var(--font-display);font-size:18px;font-weight:700;color:var(--primary);margin:28px 0 12px;">Calendrier prévisionnel</h3>
-        <div class="timeline">
-          <div class="timeline-item">
-            <div class="timeline-date">T1 2026 (en cours)</div>
-            <div class="timeline-title">Préparation & documentation</div>
-            <div class="timeline-body">Finalisation du pack investisseur, Data Room, BP, audits préparatoires.</div>
-          </div>
-          <div class="timeline-item gold">
-            <div class="timeline-date">T2 2026</div>
-            <div class="timeline-title">Prise de contact acquéreurs</div>
-            <div class="timeline-body">Roadshow, LOI, NDA, accès Data Room qualifiés.</div>
-          </div>
-          <div class="timeline-item green">
-            <div class="timeline-date">T3 2026</div>
-            <div class="timeline-title">Due Diligence & Négociation</div>
-            <div class="timeline-body">Audit d'acquisition, négociation SPA, finalisation conditions.</div>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-date">T4 2026</div>
-            <div class="timeline-title">Closing & Transition</div>
-            <div class="timeline-body">Signature définitive, transfert, plan d'intégration et accompagnement.</div>
-          </div>
-        </div>
+        <div class="footer-logo">CAD 42</div>
+        <div style="font-size:0.78rem;margin-top:4px;">Saint-Étienne, France — ConstructTech & IoT de sécurité</div>
       </div>
-
-      <div>
-        <h3 style="font-family:var(--font-display);font-size:20px;font-weight:700;color:var(--primary);margin-bottom:16px;">Valorisation indicative</h3>
-        <div class="divider"></div>
-        <div class="highlight-box gold">
-          <p><strong>Méthodes de valorisation appliquées :</strong><br />
-          — Multiple ARR (SaaS) : 8–15x ARR selon croissance<br />
-          — Multiple CA : 6–10x CA récurrent<br />
-          — DCF sur projections 2026–2030 (scénario base)<br />
-          — Comparables transactions ConstructTech EU (2023–2025)</p>
-        </div>
-        <p style="font-size:12px;color:var(--text-muted);font-family:var(--font-mono);margin-top:8px;">* Valorisation précise confidentielle — disponible sur NDA signé.</p>
-
-        <h3 style="font-family:var(--font-display);font-size:18px;font-weight:700;color:var(--primary);margin:28px 0 12px;">Profils d'acquéreurs cibles</h3>
-        <div class="cards" style="grid-template-columns:1fr;gap:12px;">
-          <div class="card">
-            <div class="card-icon">🏭</div>
-            <h3>Acquéreurs industriels / Stratégiques</h3>
-            <p>Fabricants de grues (Liebherr, Manitowoc, Potain, Tadano), groupes BTP (Vinci, Bouygues, Eiffage), acteurs de l'assurance construction, éditeurs de solutions BTP (Trimble, Hexagon).</p>
-            <div class="tags"><span class="tag green">Synergies fortes</span></div>
-          </div>
-          <div class="card">
-            <div class="card-icon gold">💰</div>
-            <h3>Fonds de Private Equity / Growth</h3>
-            <p>PE spécialisés B2B SaaS et ConstructTech (HG Capital, Keensight, Marlin Equity). Ticket minimum 5M€. Appétit pour le profil ARR récurrent + croissance + moats défendables.</p>
-            <div class="tags"><span class="tag gold">Valorisation optimisée</span></div>
-          </div>
-          <div class="card">
-            <div class="card-icon">🌍</div>
-            <h3>Acteurs IoT / Plateformes industrie</h3>
-            <p>Siemens, ABB, Schneider Electric, PTC, Honeywell — présents sur l'IoT industriel et cherchant à adresser le vertical BTP/construction avec une solution clé en main.</p>
-            <div class="tags"><span class="tag">Scale immédiat</span></div>
-          </div>
-        </div>
+      <div class="footer-note">
+        <strong style="color:rgba(255,255,255,0.8);">Document strictement confidentiel.</strong><br />
+        Ce document est exclusivement destiné aux personnes ayant signé un accord de confidentialité (NDA) dans le cadre du processus de cession de CAD 42. Toute reproduction, diffusion ou utilisation non autorisée est interdite et passible de poursuites. © CAD 42 — 2026.
       </div>
     </div>
+  </footer>
 
-    <div style="margin-top:40px;">
-      <h3 style="font-family:var(--font-display);font-size:20px;font-weight:700;color:var(--primary);margin-bottom:20px;">Data Room — Index des documents disponibles</h3>
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr>
-              <th>Catégorie</th>
-              <th>Documents</th>
-              <th>Statut</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>Corporate / Juridique</strong></td>
-              <td>Statuts, Kbis, PV AG, cap table, pacte d'actionnaires, contrats fondateurs</td>
-              <td><span class="tag green">Disponible</span></td>
-            </tr>
-            <tr>
-              <td><strong>Finance</strong></td>
-              <td>Comptes 2022–2024 (audités), BP 2026 détaillé, modèle financier Excel, reporting mensuel</td>
-              <td><span class="tag green">Disponible</span></td>
-            </tr>
-            <tr>
-              <td><strong>Commercial</strong></td>
-              <td>Liste clients (anonymisée), contrats-cadres types, ARR breakdown, pipeline Q2 2026</td>
-              <td><span class="tag green">Disponible</span></td>
-            </tr>
-            <tr>
-              <td><strong>Propriété Intellectuelle</strong></td>
-              <td>Dépôts de brevets, fiches techniques produits, documentation code, licences tierces</td>
-              <td><span class="tag green">Disponible</span></td>
-            </tr>
-            <tr>
-              <td><strong>RH</strong></td>
-              <td>Organigramme nominatif, contrats-type, BSPCE, accords collectifs, masse salariale</td>
-              <td><span class="tag gold">Sur demande NDA</span></td>
-            </tr>
-            <tr>
-              <td><strong>Technique</strong></td>
-              <td>Architecture système, audit sécurité, certifications, SLA, roadmap produit détaillée</td>
-              <td><span class="tag gold">Sur demande NDA</span></td>
-            </tr>
-            <tr>
-              <td><strong>Litiges</strong></td>
-              <td>Registre des litiges, provisions, contentieux en cours</td>
-              <td><span class="tag gold">Sur demande NDA</span></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </div>
-</section>
+  <script>
+    // ===== NAVIGATION ACTIVE STATE =====
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-links a');
 
-<!-- ===== 10. RÉSUMÉ EXECUTIF ===== -->
-<section class="section" style="background: linear-gradient(135deg, var(--primary), var(--secondary)); color: white;">
-  <div class="section-inner">
-    <div class="section-header">
-      <div class="section-num" style="background: rgba(255,255,255,.15); color: white; border-color: rgba(255,255,255,.3);">10</div>
-      <div class="section-title-block">
-        <h2 class="section-title" style="color:white;">Résumé Exécutif — Proposition de Valeur</h2>
-        <p class="section-subtitle" style="color:rgba(255,255,255,.65);">Les 5 arguments clés pour l'investissement / l'acquisition de CAD 42</p>
-      </div>
-    </div>
+    const observerOptions = {
+      root: null,
+      rootMargin: '-20% 0px -70% 0px',
+      threshold: 0
+    };
 
-    <div class="cards">
-      <div class="card" style="background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.15);color:white;">
-        <div class="card-icon" style="background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.2);">🎯</div>
-        <h3 style="color:white;">1. Marché en explosion</h3>
-        <p style="color:rgba(255,255,255,.7);">Le ConstructTech est l'un des secteurs les moins digitalisés d'Europe avec un retard de 10 ans sur l'industrie. La réglementation, les assureurs et la pénurie de main d'œuvre créent une adoption forcée. CAD 42 est positionné sur la vague la plus précoce : la sécurité obligatoire.</p>
-      </div>
-      <div class="card" style="background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.15);color:white;">
-        <div class="card-icon" style="background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.2);">🏆</div>
-        <h3 style="color:white;">2. Leader du segment en France</h3>
-        <p style="color:rgba(255,255,255,.7);">Aucun concurrent ne propose une solution full-stack (hardware + IA + SaaS) aussi intégrée et avec une telle maturité en France. CAD 42 bénéficie d'un first-mover advantage avec des brevets, des données uniques et des partenariats exclusifs.</p>
-      </div>
-      <div class="card" style="background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.15);color:white;">
-        <div class="card-icon" style="background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.2);">🔄</div>
-        <h3 style="color:white;">3. Revenus récurrents & sticky</h3>
-        <p style="color:rgba(255,255,255,.7);">75%+ de revenus ARR récurrents. Net Revenue Retention &gt;115%. Switching costs élevés (installation hardware + données). Le modèle SaaS génère de la prévisibilité et de la valeur capitalistique premium.</p>
-      </div>
-      <div class="card" style="background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.15);color:white;">
-        <div class="card-icon" style="background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.2);">🚀</div>
-        <h3 style="color:white;">4. Scaling Europe prêt</h3>
-        <p style="color:rgba(255,255,255,.7);">Architecture produit multi-langue, multi-pays déjà conçue. Réglementations EU harmonisées. Partenariats distributeurs prêts en Allemagne et Benelux. La prochaine levée finance spécifiquement ce go-to-market EU.</p>
-      </div>
-      <div class="card" style="background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.15);color:white;">
-        <div class="card-icon" style="background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.2);">💡</div>
-        <h3 style="color:white;">5. Équipe & exécution prouvée</h3>
-        <p style="color:rgba(255,255,255,.7);">Fondateurs avec double expertise BTP + technologie. Track record de livraison produit (V1 → V11 en 5 ans). Croissance commerciale soutenue sans fonds institutionnels majeurs à ce stade — "capital efficient".</p>
-      </div>
-    </div>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === '#' + entry.target.id) {
+              link.classList.add('active');
+            }
+          });
+        }
+      });
+    }, observerOptions);
 
-    <div style="margin-top:48px;text-align:center;">
-      <p style="font-family:var(--font-mono);font-size:13px;color:rgba(255,255,255,.5);letter-spacing:1px;text-transform:uppercase;">Contact pour le processus de cession</p>
-      <p style="font-family:var(--font-display);font-size:24px;font-weight:700;color:white;margin-top:8px;">Julien Silfest — novalt.co</p>
-      <p style="font-family:var(--font-body);font-size:16px;color:rgba(255,255,255,.65);margin-top:4px;">julien.silfest@novalt.co</p>
-    </div>
-  </div>
-</section>
+    sections.forEach(section => observer.observe(section));
 
-<!-- FOOTER -->
-<footer class="footer">
-  <p><strong>CAD 42</strong> — Document de présentation confidentiel — Version Mars 2026</p>
-  <p style="margin-top:8px;">Ce document est strictement confidentiel et destiné exclusivement aux destinataires autorisés dans le cadre du processus de cession. Toute reproduction, diffusion ou utilisation sans autorisation préalable écrite est interdite.</p>
-  <p style="margin-top:8px;font-size:11px;">Préparé par Novalt.co pour CAD 42 — Les projections financières sont indicatives et n'engagent pas la société.</p>
-</footer>
+    // ===== PROGRESS BARS ANIMATION =====
+    const progressBars = document.querySelectorAll('.progress-bar-fill');
 
-<script>
-  // Smooth scroll for nav links
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-      e.preventDefault();
-      const target = document.querySelector(this.getAttribute('href'));
-      if (target) {
-        const offset = 110;
-        const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
-        window.scrollTo({ top, behavior: 'smooth' });
-      }
+    const progressObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const bar = entry.target;
+          const targetWidth = bar.style.getPropertyValue('--target-width') || '0%';
+          const numericWidth = Math.min(parseFloat(targetWidth), 100);
+          setTimeout(() => {
+            bar.style.width = numericWidth + '%';
+          }, 150);
+          progressObserver.unobserve(bar);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    progressBars.forEach(bar => {
+      bar.style.width = '0%';
+      progressObserver.observe(bar);
     });
-  });
 
-  // Animate progress bars on scroll
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.style.width = entry.target.dataset.width || entry.target.style.width;
-      }
+    // ===== SMOOTH SCROLL FOR NAV LINKS =====
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          const offset = 110;
+          const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
+          window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+        }
+      });
     });
-  }, { threshold: 0.2 });
 
-  document.querySelectorAll('.progress-fill').forEach(bar => {
-    const w = bar.style.width;
-    bar.style.width = '0';
-    bar.dataset.width = w;
-    setTimeout(() => { bar.style.width = w; }, 500);
-    observer.observe(bar);
-  });
+    // ===== FADE-IN ON SCROLL =====
+    const fadeEls = document.querySelectorAll('.card, .card-alt, .kpi-card, .risk-card, .timeline-item');
+    const fadeObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+          fadeObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.05 });
 
-  // Highlight active nav link
-  const sections = document.querySelectorAll('section[id]');
-  const navLinks = document.querySelectorAll('.nav-links a');
-
-  window.addEventListener('scroll', () => {
-    let current = '';
-    sections.forEach(section => {
-      if (window.pageYOffset >= section.offsetTop - 140) {
-        current = section.getAttribute('id');
-      }
+    fadeEls.forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(16px)';
+      el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+      fadeObserver.observe(el);
     });
-    navLinks.forEach(link => {
-      link.style.background = '';
-      link.style.color = '';
-      if (link.getAttribute('href') === '#' + current) {
-        link.style.background = 'rgba(37,99,235,.08)';
-        link.style.color = 'var(--accent)';
-      }
-    });
-  });
-</script>
+  </script>
 </body>
 </html>

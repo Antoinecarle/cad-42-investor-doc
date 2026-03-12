@@ -1,6 +1,46 @@
-# CAD 42 — Design System (Novalt Style)
+# CAD 42 — Design System (Novalt Style + IM Investment Banking)
 
 Generated: 2026-03-12
+Updated: 2026-03-12 — Phase 1: IM style via Gemini MCP
+
+---
+
+## IM Investment Banking Design System (Active — public/index.html)
+
+### Typography
+- **Clash Display** (Fontshare) — Headings, section numbers, cover title
+- **Satoshi** (Fontshare) — Body text, labels, table content
+- **JetBrains Mono** (Fontshare) — Code, KPIs, financial numbers
+
+### Color Palette IM
+| Token | Value | Usage |
+|---|---|---|
+| `--primary-navy` | `#0D1B2A` | Section headers bg, side nav active, cover bg |
+| `--gold-accent` | `#C9973A` | Gold bar on section headers, links, KPI values |
+| `--light-bg` | `#F8F6F2` | Main page background |
+| `--white` | `#FFFFFF` | Cards, table bg |
+| `--text-dark` | `#1A1A2E` | Primary text |
+| `--text-mid` | `#4A4A6A` | Secondary text, meta |
+| `--border` | `rgba(13,27,42,0.12)` | Table borders, card borders |
+
+### Components IM
+- `.im-cover` — Full-page navy cover with Clash Display title
+- `.section-header` — Navy bg, 4px gold left bar, ghost number (opacity 0.08)
+- `.im-table` — Navy thead, alternating `.alt` rows, `.positive`/`.negative` cells
+- `.info-box` — Gold left border, subtle gold bg
+- `.kpi-card` — White card, gold KPI value
+- `.timeline` — Left border timeline with dots
+- `.arch-block` — Navy bg block for technical architecture
+- `.risk-badge` — `faible`/`modéré`/`élevé` colored badges
+- `.prog-fill` — Animated gold progress bar (IntersectionObserver)
+
+### Print Rules
+- `@media print` — Hides `.im-toolbar`, `.im-side-nav`, shows page breaks
+- `@page { size: A4; margin: 0; }` — A4 format
+
+---
+
+## Novalt Style (Legacy reference)
 
 ---
 
